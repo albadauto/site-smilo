@@ -1,0 +1,63 @@
+import {
+  LayoutDashboard,
+  Users,
+  ClipboardList,
+  CalendarDays,
+  CreditCard,
+  Stethoscope,
+  Layers,
+  UserCog,
+  Settings2,
+  Lock,
+  ShieldCheck,
+  Eye,
+  Check,
+  ArrowRight,
+  Menu,
+  X,
+  ChevronDown,
+  Mail,
+  Phone,
+  MapPin,
+  MessageCircle,
+  Sparkles,
+  Building2,
+  HeartHandshake,
+  Clock,
+  Star,
+} from "lucide-react";
+
+const registry = {
+  LayoutDashboard,
+  Users,
+  ClipboardList,
+  CalendarDays,
+  CreditCard,
+  Stethoscope,
+  Layers,
+  UserCog,
+  Settings2,
+  Lock,
+  ShieldCheck,
+  Eye,
+  Check,
+  ArrowRight,
+  Menu,
+  X,
+  ChevronDown,
+  Mail,
+  Phone,
+  MapPin,
+  MessageCircle,
+  Sparkles,
+  Building2,
+  HeartHandshake,
+  Clock,
+  Star,
+};
+
+export default function Icon({ name, className, strokeWidth = 1.75, ...props }) {
+  const Cmp = registry[name];
+  if (!Cmp) return null;
+  return <Cmp className={className} strokeWidth={strokeWidth} aria-hidden="true" {...props} />;
+}
