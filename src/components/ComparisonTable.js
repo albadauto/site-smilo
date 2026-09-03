@@ -40,15 +40,11 @@ export default function ComparisonTable() {
               <th scope="row" className="px-6 py-3.5 text-left font-normal text-ink-700">
                 {row.label}
               </th>
-              <td className="px-6 py-3.5 text-center">
-                <Cell value={row.solo} />
-              </td>
-              <td className="px-6 py-3.5 text-center">
-                <Cell value={row.clinica} />
-              </td>
-              <td className="px-6 py-3.5 text-center">
-                <Cell value={row.pro} />
-              </td>
+              {pricingPlans.map((plan) => (
+                <td key={plan.id} className="px-6 py-3.5 text-center">
+                  <Cell value={row[plan.id]} />
+                </td>
+              ))}
             </tr>
           ))}
         </tbody>

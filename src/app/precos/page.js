@@ -9,9 +9,9 @@ import JsonLd from "@/components/JsonLd";
 import { pricingPlans, pricingFaq } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
-const title = "Preços do Smilo CRM — planos Solo, Clínica e Pro";
+const title = "Preços do Smilo CRM — planos Solo e Clínica/Pro";
 const description =
-  "Conheça os planos do Smilo: Solo (R$89/mês), Clínica (R$169/mês) e Pro (R$249/mês). Sem limite de pacientes cadastrados e sem taxa de implantação escondida.";
+  "Conheça os planos do Smilo: Solo (R$89/mês) e Clínica/Pro (R$199/mês). Sem limite de pacientes cadastrados e sem taxa de implantação escondida.";
 
 export const metadata = {
   title,
@@ -67,7 +67,7 @@ export default function PrecosPage() {
 
       <section className="py-20 sm:py-28">
         <Container>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 max-w-3xl mx-auto">
             {pricingPlans.map((plan) => (
               <PricingCard key={plan.id} plan={plan} />
             ))}

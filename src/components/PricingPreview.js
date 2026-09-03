@@ -14,7 +14,7 @@ export default function PricingPreview() {
           description="Sem taxa de implantação escondida e sem limite de pacientes cadastrados. Escolha o plano pelo tamanho da sua equipe e evolua quando precisar."
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 max-w-3xl mx-auto">
           {pricingPlans.map((plan) => (
             <PricingCard key={plan.id} plan={plan} />
           ))}

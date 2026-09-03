@@ -116,8 +116,7 @@ const softwareJsonLd = {
   description: siteConfig.description,
   offers: [
     { "@type": "Offer", name: "Solo", price: "89.00", priceCurrency: "BRL", url: `${siteConfig.url}/precos` },
-    { "@type": "Offer", name: "Clínica", price: "169.00", priceCurrency: "BRL", url: `${siteConfig.url}/precos` },
-    { "@type": "Offer", name: "Pro", price: "249.00", priceCurrency: "BRL", url: `${siteConfig.url}/precos` },
+    { "@type": "Offer", name: "Clínica/Pro", price: "199.00", priceCurrency: "BRL", url: `${siteConfig.url}/precos` },
   ],
   publisher: { "@id": `${siteConfig.url}/#organization` },
 };

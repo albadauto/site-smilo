@@ -191,7 +191,6 @@ export const pricingPlans = [
     ctaLabel: "Começar com o Solo",
     features: [
       "1 profissional",
-      "Agenda de atendimentos",
       "Cadastro de pacientes",
       "Prontuário clínico completo",
       "Cadastro de serviços e procedimentos",
@@ -201,36 +200,18 @@ export const pricingPlans = [
   },
   {
     id: "clinica",
-    name: "Clínica",
+    name: "Clínica/Pro",
     description: "Para clínicas com equipe e mais de um dentista.",
-    price: "169",
+    price: "199",
     priceSuffix: "/mês",
     highlighted: true,
     badge: "Mais escolhido",
-    ctaLabel: "Começar com o Clínica",
-    features: [
-      "Até 5 profissionais",
-      "Tudo do plano Solo",
-      "Usuários e permissões por perfil",
-      "Consulta financeira por profissional",
-      "Parâmetros institucionais da clínica",
-      "Múltiplas agendas simultâneas",
-      "Suporte prioritário",
-    ],
-  },
-  {
-    id: "pro",
-    name: "Pro",
-    description: "Para redes e clínicas com operação em maior escala.",
-    price: "249",
-    priceSuffix: "/mês",
-    highlighted: false,
-    ctaLabel: "Começar com o Pro",
+    ctaLabel: "Começar com o Clínica/Pro",
     features: [
       "Profissionais ilimitados",
-      "Tudo do plano Clínica",
-      "Suporte para múltiplas unidades",
-      "Onboarding assistido da equipe",
+      "Tudo do plano Solo",
+      "Agenda de atendimentos",
+      "Usuários e permissões por perfil",
       "Relatórios financeiros avançados",
       "Suporte prioritário com canal dedicado",
     ],
@@ -238,23 +219,18 @@ export const pricingPlans = [
 ];
 
 export const comparisonFeatures = [
-  { label: "Profissionais (dentistas)", solo: "1", clinica: "Até 5", pro: "Ilimitados" },
-  { label: "Agenda de atendimentos", solo: true, clinica: true, pro: true },
-  { label: "Cadastro de pacientes", solo: true, clinica: true, pro: true },
-  { label: "Prontuário clínico completo", solo: true, clinica: true, pro: true },
-  { label: "Serviços e procedimentos", solo: true, clinica: true, pro: true },
-  { label: "Cobranças e financeiro", solo: true, clinica: true, pro: true },
-  { label: "Usuários e permissões por perfil", solo: false, clinica: true, pro: true },
-  { label: "Consulta financeira por profissional", solo: false, clinica: true, pro: true },
-  { label: "Parâmetros institucionais da clínica", solo: false, clinica: true, pro: true },
-  { label: "Suporte para múltiplas unidades", solo: false, clinica: false, pro: true },
-  { label: "Onboarding assistido da equipe", solo: false, clinica: false, pro: true },
-  { label: "Relatórios financeiros avançados", solo: false, clinica: false, pro: true },
+  { label: "Profissionais (dentistas)", solo: "1", clinica: "Ilimitados" },
+  { label: "Agenda de atendimentos", solo: false, clinica: true },
+  { label: "Cadastro de pacientes", solo: true, clinica: true },
+  { label: "Prontuário clínico completo", solo: true, clinica: true },
+  { label: "Serviços e procedimentos", solo: true, clinica: true },
+  { label: "Cobranças e financeiro", solo: true, clinica: true },
+  { label: "Usuários e permissões por perfil", solo: false, clinica: true },
+  { label: "Relatórios financeiros avançados", solo: false, clinica: true },
   {
     label: "Suporte",
     solo: "E-mail e WhatsApp",
-    clinica: "Prioritário",
-    pro: "Prioritário + canal dedicado",
+    clinica: "Prioritário + canal dedicado",
   },
 ];
 
@@ -267,7 +243,7 @@ export const pricingFaq = [
   {
     question: "Posso mudar de plano depois de assinar?",
     answer:
-      "Sim. Você pode migrar entre os planos Solo, Clínica e Pro conforme sua clínica cresce, sem perder o histórico de pacientes, prontuários e cobranças já cadastrados.",
+      "Sim. Você pode migrar entre os planos Solo e Clínica/Pro conforme sua clínica cresce, sem perder o histórico de pacientes, prontuários e cobranças já cadastrados.",
   },
   {
     question: "Existe limite de pacientes cadastrados?",
