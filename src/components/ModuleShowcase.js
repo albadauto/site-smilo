@@ -23,9 +23,9 @@ export default function ModuleShowcase({ module, index }) {
         <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-ink-950 text-white">
           <Icon name={module.icon} className="h-5 w-5" />
         </div>
-        <h3 className="mt-5 text-2xl font-semibold tracking-tight text-ink-950 sm:text-3xl">
+        <h2 className="mt-5 text-2xl font-semibold tracking-tight text-ink-950 sm:text-3xl">
           {module.name}
-        </h3>
+        </h2>
         <p className="mt-4 text-base leading-relaxed text-ink-600">{module.description}</p>
         <ul className="mt-6 space-y-3">
           {module.bullets.map((bullet) => (

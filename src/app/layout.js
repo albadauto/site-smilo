@@ -10,8 +10,8 @@ import { siteConfig } from "@/lib/site";
 export const metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — Sistema para Clínicas Odontológicas`,
-    template: `%s · ${siteConfig.name}`,
+    default: "Smilo CRM | Sistema para Clínicas Odontológicas",
+    template: "%s | Smilo CRM",
   },
   description: siteConfig.description,
   keywords: siteConfig.keywords,
@@ -29,8 +29,8 @@ export const metadata = {
     type: "website",
     locale: siteConfig.locale,
     url: siteConfig.url,
-    siteName: siteConfig.name,
-    title: `${siteConfig.name} — Sistema para Clínicas Odontológicas`,
+    siteName: siteConfig.fullName,
+    title: "Smilo CRM | Sistema para Clínicas Odontológicas",
     description: siteConfig.description,
     images: [
       {
@@ -43,7 +43,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} — Sistema para Clínicas Odontológicas`,
+    title: "Smilo CRM | Sistema para Clínicas Odontológicas",
     description: siteConfig.description,
     images: [siteConfig.ogImage],
   },
@@ -119,6 +119,7 @@ const softwareJsonLd = {
     { "@type": "Offer", name: "Clínica/Pro", price: "199.00", priceCurrency: "BRL", url: `${siteConfig.url}/precos` },
   ],
   publisher: { "@id": `${siteConfig.url}/#organization` },
+  inLanguage: "pt-BR",
 };
 
 export default function RootLayout({ children }) {

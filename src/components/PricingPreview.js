@@ -16,7 +16,7 @@ export default function PricingPreview() {
 
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 max-w-3xl mx-auto">
           {pricingPlans.map((plan) => (
-            <PricingCard key={plan.id} plan={plan} />
+            <PricingCard key={plan.id} plan={plan} headingLevel={3} />
           ))}
         </div>
 

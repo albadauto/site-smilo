@@ -5,17 +5,19 @@ import SectionHeading from "@/components/SectionHeading";
 import CtaSection from "@/components/CtaSection";
 import Icon from "@/components/Icon";
 import { siteConfig } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
+import { createBreadcrumbJsonLd, createPageMetadata } from "@/lib/seo";
 
-const title = "Sobre o Smilo — sistema de gestão para clínicas odontológicas";
+const title = "Sobre o Smilo | CRM para Clínicas Odontológicas";
 const description =
-  "Conheça o Smilo, sistema de gestão desenvolvido pela Mindit Soluções Digitais para simplificar a rotina de clínicas odontológicas: agenda, prontuário, pacientes e financeiro em um só lugar.";
+  "Conheça o Smilo CRM, criado para simplificar a gestão de clínicas odontológicas com agenda, prontuário, pacientes e financeiro em um só lugar.";
 
-export const metadata = {
-  title,
-  description,
-  alternates: { canonical: "/sobre" },
-  openGraph: { url: "/sobre", title, description },
-};
+export const metadata = createPageMetadata({ title, description, path: "/sobre" });
+
+const breadcrumbJsonLd = createBreadcrumbJsonLd([
+  { name: "Início", path: "/" },
+  { name: "Sobre o Smilo", path: "/sobre" },
+]);
 
 const values = [
   {
@@ -41,6 +43,7 @@ const values = [
 export default function SobrePage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd} />
       <PageHero
         eyebrow="Sobre o Smilo"
         title="Um CRM pensado de dentro da rotina de uma clínica odontológica"

@@ -4,21 +4,23 @@ import ContactForm from "@/components/ContactForm";
 import Icon from "@/components/Icon";
 import Button from "@/components/Button";
 import { siteConfig, whatsappLink, defaultWhatsappMessage } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
+import { createBreadcrumbJsonLd, createPageMetadata } from "@/lib/seo";
 
-const title = "Contato — fale com o time do Smilo";
+const title = "Contato | Smilo CRM para Clínicas Odontológicas";
 const description =
-  "Fale com o time do Smilo CRM por e-mail, telefone ou WhatsApp. Atendimento de segunda a sexta-feira, das 9h às 18h.";
+  "Fale com o Smilo CRM por WhatsApp ou e-mail. Tire dúvidas sobre planos e recursos para organizar sua clínica odontológica.";
 
-export const metadata = {
-  title,
-  description,
-  alternates: { canonical: "/contato" },
-  openGraph: { url: "/contato", title, description },
-};
+export const metadata = createPageMetadata({ title, description, path: "/contato" });
+
+const breadcrumbJsonLd = createBreadcrumbJsonLd([
+  { name: "Início", path: "/" },
+  { name: "Contato", path: "/contato" },
+]);
 
 const contactCards = [
   {
-    icon: "MessageCircle",
+    icon: "WhatsApp",
     title: "WhatsApp",
     value: siteConfig.phone,
     href: whatsappLink(defaultWhatsappMessage),
@@ -42,6 +44,7 @@ const contactCards = [
 export default function ContatoPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd} />
       <PageHero
         eyebrow="Contato"
         title="Vamos organizar a gestão da sua clínica"
@@ -69,7 +72,10 @@ export default function ContatoPage() {
                           className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-ink-950 hover:underline"
                         >
                           {card.cta}
-                          <Icon name="ArrowRight" className="h-3.5 w-3.5" />
+                          <Icon
+                            name={card.title === "WhatsApp" ? "WhatsApp" : "ArrowRight"}
+                            className="h-3.5 w-3.5"
+                          />
                         </a>
                       ) : null}
                     </div>
@@ -87,7 +93,7 @@ export default function ContatoPage() {
                   external
                   variant="inverse"
                   className="mt-4 w-full"
-                  icon="MessageCircle"
+                  icon="WhatsApp"
                 >
                   Abrir WhatsApp
                 </Button>

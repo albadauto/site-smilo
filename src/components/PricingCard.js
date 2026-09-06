@@ -2,8 +2,9 @@ import Icon from "./Icon";
 import Button from "./Button";
 import { whatsappLink } from "@/lib/site";
 
-export default function PricingCard({ plan }) {
+export default function PricingCard({ plan, headingLevel = 2 }) {
   const message = `Olá! Quero assinar o plano ${plan.name} do Smilo (R$${plan.price}${plan.priceSuffix}).`;
+  const Heading = headingLevel === 3 ? "h3" : "h2";
 
   return (
     <div
@@ -19,7 +20,7 @@ export default function PricingCard({ plan }) {
         </span>
       ) : null}
 
-      <h3 className="text-lg font-semibold">{plan.name}</h3>
+      <Heading className="text-lg font-semibold">{plan.name}</Heading>
       <p className={`mt-1.5 text-sm leading-relaxed ${plan.highlighted ? "text-white/60" : "text-ink-600"}`}>
         {plan.description}
       </p>
@@ -40,7 +41,7 @@ export default function PricingCard({ plan }) {
         external
         variant={plan.highlighted ? "inverse" : "primary"}
         className="mt-7 w-full"
-        icon="ArrowRight"
+        icon="WhatsApp"
       >
         {plan.ctaLabel}
       </Button>
