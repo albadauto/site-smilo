@@ -10,17 +10,23 @@ import FaqAccordion from "@/components/FaqAccordion";
 import CtaSection from "@/components/CtaSection";
 import Button from "@/components/Button";
 import { modules, generalFaq } from "@/lib/content";
-import { siteConfig } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: `${siteConfig.name} — Sistema de Gestão para Clínicas Odontológicas`,
-  description: siteConfig.description,
-  alternates: { canonical: "/" },
-  openGraph: {
-    url: "/",
-    title: `${siteConfig.name} — Sistema de Gestão para Clínicas Odontológicas`,
-    description: siteConfig.description,
-  },
+const title = "Smilo CRM | Sistema para Clínicas Odontológicas";
+const description =
+  "Gerencie agenda, prontuários, pacientes, cobranças e financeiro da sua clínica odontológica em um só lugar com o Smilo CRM.";
+
+export const metadata = createPageMetadata({ title, description, path: "/" });
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: generalFaq.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
 };
 
 const highlighted = modules.filter((m) => ["prontuario", "cobrancas"].includes(m.slug));
@@ -28,6 +34,7 @@ const highlighted = modules.filter((m) => ["prontuario", "cobrancas"].includes(m
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={faqJsonLd} />
       <Hero />
       <StatsRow />
 

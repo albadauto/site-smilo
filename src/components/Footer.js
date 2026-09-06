@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-white">Produto</h3>
+            <h2 className="text-sm font-semibold text-white">Produto</h2>
             <ul className="mt-4 space-y-3 text-sm text-white/60">
               {productLinks.map((link) => (
                 <li key={link.href}>
@@ -47,7 +47,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-white">Empresa</h3>
+            <h2 className="text-sm font-semibold text-white">Empresa</h2>
             <ul className="mt-4 space-y-3 text-sm text-white/60">
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-white">Contato</h3>
+            <h2 className="text-sm font-semibold text-white">Contato</h2>
             <ul className="mt-4 space-y-3 text-sm text-white/60">
               <li className="flex items-center gap-2">
                 <Icon name="Mail" className="h-4 w-4 shrink-0 text-white/40" />

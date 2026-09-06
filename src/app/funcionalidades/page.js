@@ -4,27 +4,18 @@ import ModuleShowcase from "@/components/ModuleShowcase";
 import CtaSection from "@/components/CtaSection";
 import JsonLd from "@/components/JsonLd";
 import { modules } from "@/lib/content";
-import { siteConfig } from "@/lib/site";
+import { createBreadcrumbJsonLd, createPageMetadata } from "@/lib/seo";
 
-const title = "Funcionalidades do Smilo CRM para clínicas odontológicas";
+const title = "Funcionalidades | Smilo CRM Odontológico";
 const description =
-  "Conheça todos os módulos do Smilo: dashboard, pacientes, prontuário clínico, agenda, cobranças, profissionais, serviços, usuários e permissões, e parâmetros da clínica.";
+  "Conheça os módulos do Smilo CRM: agenda, pacientes, prontuário, cobranças, profissionais, serviços, usuários e gestão da clínica odontológica.";
 
-export const metadata = {
-  title,
-  description,
-  alternates: { canonical: "/funcionalidades" },
-  openGraph: { url: "/funcionalidades", title, description },
-};
+export const metadata = createPageMetadata({ title, description, path: "/funcionalidades" });
 
-const breadcrumbJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Início", item: siteConfig.url },
-    { "@type": "ListItem", position: 2, name: "Funcionalidades", item: `${siteConfig.url}/funcionalidades` },
-  ],
-};
+const breadcrumbJsonLd = createBreadcrumbJsonLd([
+  { name: "Início", path: "/" },
+  { name: "Funcionalidades", path: "/funcionalidades" },
+]);
 
 export default function FuncionalidadesPage() {
   return (

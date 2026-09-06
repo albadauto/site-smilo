@@ -65,7 +65,7 @@ export default function Navbar() {
             external
             variant="outline"
             className="!px-4 !py-2.5 text-sm"
-            icon="MessageCircle"
+            icon="WhatsApp"
           >
             Falar com vendas
           </Button>
@@ -102,7 +102,7 @@ export default function Navbar() {
                 href={whatsappLink(defaultWhatsappMessage)}
                 external
                 variant="outline"
-                icon="MessageCircle"
+                icon="WhatsApp"
               >
                 Falar com vendas
               </Button>

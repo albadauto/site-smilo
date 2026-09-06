@@ -8,17 +8,18 @@ import CtaSection from "@/components/CtaSection";
 import JsonLd from "@/components/JsonLd";
 import { pricingPlans, pricingFaq } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
+import { createBreadcrumbJsonLd, createPageMetadata } from "@/lib/seo";
 
-const title = "Preços do Smilo CRM — planos Solo e Clínica/Pro";
+const title = "Planos e Preços | Smilo CRM Odontológico";
 const description =
-  "Conheça os planos do Smilo: Solo (R$89/mês) e Clínica/Pro (R$199/mês). Sem limite de pacientes cadastrados e sem taxa de implantação escondida.";
+  "Compare os planos Solo e Clínica/Pro do Smilo CRM. Gestão odontológica sem limite de pacientes e sem taxa de implantação escondida.";
 
-export const metadata = {
-  title,
-  description,
-  alternates: { canonical: "/precos" },
-  openGraph: { url: "/precos", title, description },
-};
+export const metadata = createPageMetadata({ title, description, path: "/precos" });
+
+const breadcrumbJsonLd = createBreadcrumbJsonLd([
+  { name: "Início", path: "/" },
+  { name: "Planos e preços", path: "/precos" },
+]);
 
 const productJsonLd = {
   "@context": "https://schema.org",
@@ -56,6 +57,7 @@ const faqJsonLd = {
 export default function PrecosPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd} />
       <JsonLd data={productJsonLd} />
       <JsonLd data={faqJsonLd} />
 

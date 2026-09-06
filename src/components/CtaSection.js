@@ -19,7 +19,7 @@ export default function CtaSection({
           {description}
         </p>
         <div className="flex flex-col items-center gap-3 sm:flex-row">
-          <Button href={whatsappLink(whatsappMessage)} external variant="inverse" icon="MessageCircle">
+          <Button href={whatsappLink(whatsappMessage)} external variant="inverse" icon="WhatsApp">
             Falar no WhatsApp
           </Button>
           <Button href={`mailto:${siteConfig.email}`} variant="outlineInverse" icon="Mail">

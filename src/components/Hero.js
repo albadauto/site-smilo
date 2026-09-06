@@ -40,7 +40,7 @@ export default function Hero() {
             href={whatsappLink(defaultWhatsappMessage)}
             external
             variant="inverse"
-            icon="ArrowRight"
+            icon="WhatsApp"
           >
             Falar com um especialista
           </Button>
@@ -56,7 +56,7 @@ export default function Hero() {
               <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
               <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
               <span className="ml-3 rounded-md bg-white/5 px-3 py-1 text-[11px] text-white/40">
-                app.smiloerp.com.br
+                app.smilocrm.com.br
               </span>
             </div>
             <Image
