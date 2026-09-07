@@ -49,8 +49,8 @@ export default function Hero() {
           </Button>
         </div>
 
-        <div className="relative mt-8 w-full max-w-5xl">
-          <div className="browser-frame border border-white/10">
+        <div className="relative mt-8 w-full max-w-4xl">
+          <div className="browser-frame border border-white/12 ">
             <div className="flex items-center gap-1.5 border-b border-white/10 bg-ink-900 px-4 py-3">
               <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
               <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
@@ -60,12 +60,12 @@ export default function Hero() {
               </span>
             </div>
             <Image
-              src="/images/screens/dashboard.png"
+              src="/images/screens/crm-odontologia.png"
               alt="Dashboard do Smilo CRM mostrando indicadores de pacientes, prontuários e pagamentos"
               width={1440}
               height={900}
               priority
-              className="w-full"
+              className="w-full max-w-xl p-2 mx-auto"
               sizes="(min-width: 1024px) 960px, 100vw"
             />
           </div>

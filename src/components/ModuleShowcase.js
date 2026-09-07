@@ -46,23 +46,23 @@ export default function ModuleShowcase({ module, index }) {
             <Image
               src={module.image}
               alt={module.imageAlt}
-              width={1440}
-              height={900}
-              className="w-full"
+              width={module.imageWidth}
+              height={module.imageHeight}
+              className="h-auto w-full"
               sizes="(min-width: 1024px) 560px, 100vw"
             />
           </div>
         </div>
         {module.secondaryImage ? (
-          <div className="browser-frame mt-5 hidden sm:block">
+          <div className="browser-frame mt-5">
             <BrowserChrome />
             <div className="bg-ink-50">
               <Image
                 src={module.secondaryImage}
                 alt={module.secondaryImageAlt}
-                width={1440}
-                height={900}
-                className="w-full"
+                width={module.secondaryImageWidth}
+                height={module.secondaryImageHeight}
+                className="h-auto w-full"
                 sizes="(min-width: 1024px) 560px, 100vw"
               />
             </div>

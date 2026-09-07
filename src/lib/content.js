@@ -1,6 +1,8 @@
 // Conteúdo do site — funcionalidades, planos e perguntas frequentes.
 // Extraído e adaptado do Manual do Usuário do Smilo CRM (v1.0).
 
+import dentistaLista from "../../public/images/screens/dentista-lista.png";
+
 export const modules = [
   {
     slug: "dashboard",
@@ -16,6 +18,8 @@ export const modules = [
       "Atalhos diretos para as áreas mais usadas",
     ],
     image: "/images/screens/dashboard.png",
+    imageWidth: 1780,
+    imageHeight: 884,
     imageAlt: "Dashboard geral do Smilo CRM com indicadores de pacientes, prontuários e pagamentos",
   },
   {
@@ -32,8 +36,12 @@ export const modules = [
       "Busca rápida para evitar cadastros duplicados",
     ],
     image: "/images/screens/paciente-form.png",
+    imageWidth: 1784,
+    imageHeight: 882,
     imageAlt: "Formulário de cadastro de paciente no Smilo CRM",
     secondaryImage: "/images/screens/pacientes-lista.png",
+    secondaryImageWidth: 1983,
+    secondaryImageHeight: 793,
     secondaryImageAlt: "Lista de pacientes cadastrados no Smilo CRM",
   },
   {
@@ -49,9 +57,13 @@ export const modules = [
       "Anexos digitais vinculados ao paciente",
       "Aba financeira com o histórico de cobranças do atendimento",
     ],
-    image: "/images/screens/prontuario-visao.png",
+    image: "/images/screens/prontuario-visao2.png",
+    imageWidth: 1778,
+    imageHeight: 885,
     imageAlt: "Visão geral do prontuário clínico do paciente no Smilo CRM",
-    secondaryImage: "/images/screens/nova-consulta.png",
+    secondaryImage: "/images/screens/nova-consulta2.png",
+    secondaryImageWidth: 1986,
+    secondaryImageHeight: 792,
     secondaryImageAlt: "Registro de uma nova consulta no prontuário do Smilo CRM",
   },
   {
@@ -68,8 +80,12 @@ export const modules = [
       "Vinculação automática com o cadastro do paciente",
     ],
     image: "/images/screens/agenda-semana.png",
+    imageWidth: 1962,
+    imageHeight: 802,
     imageAlt: "Visão semanal da agenda de atendimentos do Smilo CRM",
     secondaryImage: "/images/screens/agenda-cadastro.png",
+    secondaryImageWidth: 1951,
+    secondaryImageHeight: 806,
     secondaryImageAlt: "Cadastro de um novo compromisso na agenda do Smilo CRM",
   },
   {
@@ -85,9 +101,13 @@ export const modules = [
       "Baixa de pagamentos com confirmação de segurança",
       "Histórico financeiro completo por paciente",
     ],
-    image: "/images/screens/cobrancas-lista.png",
+    image: "/images/screens/cobrancas-lista2.png",
+    imageWidth: 1774,
+    imageHeight: 887,
     imageAlt: "Relação de cobranças do sistema Smilo CRM",
-    secondaryImage: "/images/screens/cobranca-detalhes.png",
+    secondaryImage: "/images/screens/cobranca-detalhes2.png",
+    secondaryImageWidth: 1880,
+    secondaryImageHeight: 837,
     secondaryImageAlt: "Detalhes e baixa de uma cobrança no Smilo CRM",
   },
   {
@@ -104,11 +124,15 @@ export const modules = [
       "Organização por especialidade clínica",
     ],
     image: "/images/screens/dentista-form.png",
+    imageWidth: 1441,
+    imageHeight: 585,
     imageAlt: "Formulário de cadastro de dentista no Smilo CRM",
-    secondaryImage: "/images/screens/dentista-lista.png",
+    secondaryImage: dentistaLista,
+    secondaryImageWidth: 1983,
+    secondaryImageHeight: 793,
     secondaryImageAlt: "Lista de dentistas cadastrados no Smilo CRM",
   },
-  {
+  { 
     slug: "servicos",
     icon: "Layers",
     name: "Serviços e procedimentos",
@@ -122,6 +146,8 @@ export const modules = [
       "Base para a geração correta de cobranças",
     ],
     image: "/images/screens/servicos-cadastro.png",
+    imageWidth: 1229,
+    imageHeight: 444,
     imageAlt: "Cadastro de serviços da clínica no Smilo CRM",
   },
   {
@@ -137,9 +163,13 @@ export const modules = [
       "Restrição de menus sensíveis por perfil",
       "Cada pessoa acessa apenas o que precisa",
     ],
-    image: "/images/screens/usuarios-lista.png",
+    image: "/images/screens/usuarios-lista2.png",
+    imageWidth: 2120,
+    imageHeight: 742,
     imageAlt: "Administração de usuários do Smilo CRM",
-    secondaryImage: "/images/screens/usuarios-cadastro.jpeg",
+    secondaryImage: "/images/screens/usuarios-cadastrado.png",
+    secondaryImageWidth: 1983,
+    secondaryImageHeight: 793,
     secondaryImageAlt: "Cadastro de um novo usuário no Smilo CRM",
   },
   {
@@ -155,6 +185,8 @@ export const modules = [
       "Alteração restrita a usuários autorizados",
     ],
     image: "/images/screens/parametros-clinica.png",
+    imageWidth: 2084,
+    imageHeight: 754,
     imageAlt: "Informações institucionais da clínica no Smilo CRM",
   },
 ];
@@ -189,6 +221,7 @@ export const pricingPlans = [
     priceSuffix: "/mês",
     highlighted: false,
     ctaLabel: "Começar com o Solo",
+    ctaHref:"https://app.smilocrm.com.br/cadastro?plano=solo",
     features: [
       "1 profissional",
       "Cadastro de pacientes",
@@ -207,6 +240,7 @@ export const pricingPlans = [
     highlighted: true,
     badge: "Mais escolhido",
     ctaLabel: "Começar com o Clínica/Pro",
+    ctaHref:"https://app.smilocrm.com.br/cadastro?plano=pro",
     features: [
       "Profissionais ilimitados",
       "Tudo do plano Solo",
