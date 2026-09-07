@@ -82,7 +82,7 @@ export default function PrecosPage() {
           <SectionHeading
             eyebrow="Comparativo"
             title="Compare os recursos de cada plano"
-            description="Todos os planos incluem agenda, prontuário clínico e cobranças. A diferença está no tamanho da equipe e nos recursos de gestão."
+            description="Todos os planos incluem prontuário clínico e cobranças. A diferença está no tamanho da equipe e nos recursos de gestão."
           />
           <div className="mt-12">
             <ComparisonTable />

@@ -39,7 +39,7 @@ export default function SecuritySection() {
               <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
             </div>
             <Image
-              src="/images/screens/usuarios-lista.png"
+              src="/images/screens/usuarios-lista2.png"
               alt="Administração de usuários e permissões no Smilo CRM"
               width={1440}
               height={900}

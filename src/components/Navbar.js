@@ -60,18 +60,18 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
+          <Button href="https://app.smilocrm.com.br/" className="!px-4 !py-2.5 text-sm" target="_blank">
+           Ver Planos
+          </Button>
           <Button
-            href={whatsappLink(defaultWhatsappMessage)}
-            external
-            variant="outline"
-            className="!px-4 !py-2.5 text-sm"
-            icon="WhatsApp"
-          >
-            Falar com vendas
+            href="https://app.smilocrm.com.br/login"
+          external
+          variant="outline"
+          className="!px-4 !py-2.5 text-sm"
+           icon="LogIn" target="_blank">
+            Acessar
           </Button>
-          <Button href="/precos" className="!px-4 !py-2.5 text-sm">
-            Ver preços
-          </Button>
+          
         </div>
 
         <button
@@ -97,17 +97,20 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <div className="mt-2 flex flex-col gap-2 px-1">
-              <Button
-                href={whatsappLink(defaultWhatsappMessage)}
-                external
-                variant="outline"
-                icon="WhatsApp"
-              >
-                Falar com vendas
-              </Button>
-              <Button href="/precos">Ver preços</Button>
-            </div>
+           <div className="hidden items-center gap-3 lg:flex">
+          <Button href="https://app.smilocrm.com.br/" className="!px-4 !py-2.5 text-sm" target="_blank">
+           Ver Planos
+          </Button>
+          <Button
+            href="https://app.smilocrm.com.br/login"
+          external
+          variant="outline"
+          className="!px-4 !py-2.5 text-sm"
+           icon="LogIn" target="_blank">
+            Acessar
+          </Button>
+          
+        </div>
           </Container>
         </div>
       ) : null}

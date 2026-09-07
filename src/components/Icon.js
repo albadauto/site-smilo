@@ -22,6 +22,7 @@ import {
   Sparkles,
   Building2,
   HeartHandshake,
+  LogIn,
   Clock,
   Star,
 } from "lucide-react";
@@ -50,6 +51,7 @@ const registry = {
   Sparkles,
   Building2,
   HeartHandshake,
+  LogIn,
   Clock,
   Star,
 };

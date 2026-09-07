@@ -37,11 +37,11 @@ export default function PricingCard({ plan, headingLevel = 2 }) {
       </p>
 
       <Button
-        href={whatsappLink(message)}
+        href={plan.ctaHref}
         external
         variant={plan.highlighted ? "inverse" : "primary"}
         className="mt-7 w-full"
-        icon="WhatsApp"
+        icon="ArrowRight"
       >
         {plan.ctaLabel}
       </Button>
