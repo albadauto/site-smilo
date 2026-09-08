@@ -7,7 +7,8 @@ export function trackPlanClick(link, browser = globalThis.window) {
       destination.pathname.replace(/\/$/, "") === "/precos" ||
       (destination.pathname === "/" && destination.hash === "#planos")
     );
-    if (!isPlansLink) return;
+    const isPlanSelection = link.dataset.trackPlanClick === "true";
+    if (!isPlansLink && !isPlanSelection) return;
 
     browser.gtag("event", "plan_btn_click", {
       send_to: "G-JCVRV0TW3H",

@@ -29,3 +29,28 @@ test("is safe on the server, before gtag loads, and when analytics throws", () =
   assert.doesNotThrow(() => trackPlanClick(link("/precos"), { location }));
   assert.doesNotThrow(() => trackPlanClick(link("/precos"), { location, gtag() { throw new Error("blocked"); } }));
 });
+
+test("tracks both plan signup buttons from pricing and home without changing destinations", () => {
+  for (const page of ["/precos", "/"]) {
+    for (const plan of ["solo", "pro"]) {
+      const calls = [];
+      const cta = link(`https://app.smilocrm.com.br/cadastro?plano=${plan}`);
+      const originalHref = cta.href;
+      cta.dataset = { trackPlanClick: "true", buttonName: `Começar ${plan}`, buttonLocation: page === "/" ? "home_pricing" : "pricing_page" };
+      trackPlanClick(cta, { location: new URL(page, location), gtag: (...args) => calls.push(args) });
+      assert.equal(calls.length, 1);
+      assert.equal(calls[0][1], "plan_btn_click");
+      assert.equal(calls[0][2].page_path, page);
+      assert.equal(calls[0][2].button_name, `Começar ${plan}`);
+      assert.equal(calls[0][2].button_location, cta.dataset.buttonLocation);
+      assert.equal(cta.href, originalHref);
+    }
+  }
+});
+
+test("tracks the same-page header anchor on the home page", () => {
+  const calls = [];
+  trackPlanClick(link("#planos"), { location: new URL("/", location), gtag: (...args) => calls.push(args) });
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0][2].page_path, "/");
+});
