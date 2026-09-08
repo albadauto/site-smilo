@@ -43,6 +43,11 @@ test("tracks both plan signup buttons from pricing and home without changing des
       assert.equal(calls[0][2].page_path, page);
       assert.equal(calls[0][2].button_name, `Começar ${plan}`);
       assert.equal(calls[0][2].button_location, cta.dataset.buttonLocation);
+      assert.deepEqual(calls[1], ["event", "conversion", {
+        send_to: "AW-18437044843/Jy_bCPK9xvEcEOv0u9dE",
+        value: 1.0,
+        currency: "BRL",
+      }]);
       assert.equal(cta.href, originalHref);
     }
   }

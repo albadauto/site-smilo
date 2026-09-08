@@ -19,7 +19,7 @@ export function trackPlanClick(link, browser = globalThis.window) {
 
     if (isPlanSelection) {
       browser.gtag("event", "conversion", {
-        send_to: "AW-18437044843/Jy_bCRK9xvEcEOv0u9dE",
+        send_to: "AW-18437044843/Jy_bCPK9xvEcEOv0u9dE",
         value: 1.0,
         currency: "BRL",
       });
