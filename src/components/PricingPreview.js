@@ -6,7 +6,7 @@ import { pricingPlans } from "@/lib/content";
 
 export default function PricingPreview() {
   return (
-    <section className="bg-ink-50/60 py-20 sm:py-28">
+    <section id="planos" className="scroll-mt-24 bg-ink-50/60 py-20 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="Preços"
@@ -21,7 +21,7 @@ export default function PricingPreview() {
         </div>
 
         <div className="mt-10 flex justify-center">
-          <Button href="/precos" variant="outline" icon="ArrowRight">
+          <Button data-button-location="pricing_preview" href="/precos" variant="outline" icon="ArrowRight">
             Comparar todos os recursos dos planos
           </Button>
         </div>

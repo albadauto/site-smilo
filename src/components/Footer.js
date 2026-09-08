@@ -38,7 +38,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-white/60">
               {productLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="transition-colors hover:text-white">
+                  <Link data-button-location="footer" href={link.href} className="transition-colors hover:text-white">
                     {link.label}
                   </Link>
                 </li>
@@ -51,7 +51,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-white/60">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="transition-colors hover:text-white">
+                  <Link data-button-location="footer" href={link.href} className="transition-colors hover:text-white">
                     {link.label}
                   </Link>
                 </li>

@@ -44,7 +44,7 @@ export default function Hero() {
           >
             Falar com um especialista
           </Button>
-          <Button href="/precos" variant="outlineInverse">
+          <Button data-button-location="hero" href="/precos" variant="outlineInverse">
             Ver planos e preços
           </Button>
         </div>
