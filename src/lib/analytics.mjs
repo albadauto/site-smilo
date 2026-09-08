@@ -16,6 +16,14 @@ export function trackPlanClick(link, browser = globalThis.window) {
       page_path: browser.location.pathname,
       button_location: link.dataset.buttonLocation || "content",
     });
+
+    if (isPlanSelection) {
+      browser.gtag("event", "conversion", {
+        send_to: "AW-18437044843/Jy_bCRK9xvEcEOv0u9dE",
+        value: 1.0,
+        currency: "BRL",
+      });
+    }
   } catch {
     // Analytics must never interrupt the link's normal navigation.
   }

@@ -38,7 +38,7 @@ test("tracks both plan signup buttons from pricing and home without changing des
       const originalHref = cta.href;
       cta.dataset = { trackPlanClick: "true", buttonName: `Começar ${plan}`, buttonLocation: page === "/" ? "home_pricing" : "pricing_page" };
       trackPlanClick(cta, { location: new URL(page, location), gtag: (...args) => calls.push(args) });
-      assert.equal(calls.length, 1);
+      assert.equal(calls.length, 2);
       assert.equal(calls[0][1], "plan_btn_click");
       assert.equal(calls[0][2].page_path, page);
       assert.equal(calls[0][2].button_name, `Começar ${plan}`);
