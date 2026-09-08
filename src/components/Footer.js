@@ -87,7 +87,7 @@ export default function Footer() {
             © {new Date().getFullYear()} {siteConfig.name} · {siteConfig.legalName}. Todos os
             direitos reservados.
           </p>
-          <p>CNPJ da {siteConfig.legalName} · Feito para clínicas odontológicas em todo o Brasil</p>
+          <p>CNPJ da 68.991.365/0001-69 · Feito para clínicas odontológicas em todo o Brasil</p>
         </div>
       </Container>
     </footer>

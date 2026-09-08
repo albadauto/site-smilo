@@ -1,5 +1,6 @@
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -129,6 +130,18 @@ export default function RootLayout({ children }) {
       className={`${GeistSans.variable} ${GeistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-white text-ink-950">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18437044843"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18437044843');
+          `}
+        </Script>
         <JsonLd data={organizationJsonLd} />
         <JsonLd data={websiteJsonLd} />
         <JsonLd data={softwareJsonLd} />
