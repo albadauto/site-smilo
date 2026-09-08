@@ -12,6 +12,7 @@ import { navLinks, whatsappLink, defaultWhatsappMessage } from "@/lib/site";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const plansHref = pathname === "/" ? "#planos" : "/#planos";
   const [lastPathname, setLastPathname] = useState(pathname);
 
   if (pathname !== lastPathname) {
@@ -47,6 +48,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
+                data-button-location="header_navigation"
                 className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                   active
                     ? "bg-ink-950 text-white"
@@ -60,7 +62,7 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Button href="https://app.smilocrm.com.br/" className="!px-4 !py-2.5 text-sm" target="_blank">
+          <Button href={plansHref} data-button-location="header" onClick={() => setOpen(false)} className="!px-4 !py-2.5 text-sm">
            Ver Planos
           </Button>
           <Button
@@ -92,13 +94,14 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
+                data-button-location="header_mobile_navigation"
                 className="rounded-xl px-4 py-3 text-base font-medium text-ink-800 hover:bg-ink-50"
               >
                 {link.label}
               </Link>
             ))}
-           <div className="hidden items-center gap-3 lg:flex">
-          <Button href="https://app.smilocrm.com.br/" className="!px-4 !py-2.5 text-sm" target="_blank">
+           <div className="mt-3 flex flex-wrap items-center gap-3">
+          <Button href={plansHref} data-button-location="header_mobile" onClick={() => setOpen(false)} className="!px-4 !py-2.5 text-sm">
            Ver Planos
           </Button>
           <Button

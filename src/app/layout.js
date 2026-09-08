@@ -2,6 +2,7 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import Script from "next/script";
 import "./globals.css";
+import PlanClickTracking from "@/components/PlanClickTracking";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -140,6 +141,7 @@ export default function RootLayout({ children }) {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-18437044843');
+            gtag('config', 'G-JCVRV0TW3H');
           `}
         </Script>
         <JsonLd data={organizationJsonLd} />
@@ -151,6 +153,7 @@ export default function RootLayout({ children }) {
         >
           Pular para o conteúdo
         </a>
+        <PlanClickTracking />
         <Navbar />
         <main id="conteudo-principal" className="flex-1">
           {children}

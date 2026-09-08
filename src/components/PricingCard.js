@@ -2,7 +2,7 @@ import Icon from "./Icon";
 import Button from "./Button";
 import { whatsappLink } from "@/lib/site";
 
-export default function PricingCard({ plan, headingLevel = 2 }) {
+export default function PricingCard({ plan, headingLevel = 2, buttonLocation = "pricing_page" }) {
   const message = `Olá! Quero assinar o plano ${plan.name} do Smilo (R$${plan.price}${plan.priceSuffix}).`;
   const Heading = headingLevel === 3 ? "h3" : "h2";
 
@@ -38,6 +38,9 @@ export default function PricingCard({ plan, headingLevel = 2 }) {
 
       <Button
         href={plan.ctaHref}
+        data-track-plan-click="true"
+        data-button-name={plan.ctaLabel}
+        data-button-location={buttonLocation}
         external
         variant={plan.highlighted ? "inverse" : "primary"}
         className="mt-7 w-full"

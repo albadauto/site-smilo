@@ -6,7 +6,7 @@ import { pricingPlans } from "@/lib/content";
 
 export default function PricingPreview() {
   return (
-    <section className="bg-ink-50/60 py-20 sm:py-28">
+    <section id="planos" className="scroll-mt-24 bg-ink-50/60 py-20 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="Preços"
@@ -16,12 +16,12 @@ export default function PricingPreview() {
 
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 max-w-3xl mx-auto">
           {pricingPlans.map((plan) => (
-            <PricingCard key={plan.id} plan={plan} headingLevel={3} />
+            <PricingCard key={plan.id} plan={plan} headingLevel={3} buttonLocation="home_pricing" />
           ))}
         </div>
 
         <div className="mt-10 flex justify-center">
-          <Button href="/precos" variant="outline" icon="ArrowRight">
+          <Button data-button-location="pricing_preview" href="/precos" variant="outline" icon="ArrowRight">
             Comparar todos os recursos dos planos
           </Button>
         </div>
