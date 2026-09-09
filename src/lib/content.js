@@ -48,12 +48,13 @@ export const modules = [
     slug: "prontuario",
     icon: "ClipboardList",
     name: "Prontuário clínico",
-    short: "Histórico assistencial e financeiro do paciente, em um só lugar.",
+    short: "Histórico clínico e fichas de anamnese nos planos Solo e Clínica/Pro.",
     description:
       "O prontuário reúne consultas, exames, cirurgias, procedimentos, evolução clínica, prescrições, anexos e cobranças de cada paciente. Toda movimentação clínica fica registrada e disponível para consulta a qualquer momento — com rastreabilidade completa do atendimento.",
     bullets: [
       "Registro de consultas, exames, cirurgias e procedimentos",
       "Ficha de evolução clínica e prescrições",
+      "Fichas de anamnese nos planos Solo e Clínica/Pro",
       "Anexos digitais vinculados ao paciente",
       "Aba financeira com o histórico de cobranças do atendimento",
     ],
@@ -70,12 +71,13 @@ export const modules = [
     slug: "agenda",
     icon: "CalendarDays",
     name: "Agenda de atendimentos",
-    short: "Cadastre, consulte e edite compromissos sem esforço.",
+    short: "Organize compromissos e conte com lembretes via WhatsApp no Clínica/Pro.",
     description:
       "Organize a semana da clínica com uma agenda simples de usar: cadastre compromissos para pacientes já existentes ou novos contatos, visualize a semana inteira de uma vez e edite ou cancele horários quando necessário.",
     bullets: [
       "Cadastro rápido de compromissos com telefone, data e hora",
       "Visão semanal de todos os agendamentos",
+      "Lembretes de agenda via WhatsApp exclusivos do Clínica/Pro",
       "Edição e exclusão de compromissos existentes",
       "Vinculação automática com o cadastro do paciente",
     ],
@@ -226,6 +228,7 @@ export const pricingPlans = [
       "1 profissional",
       "Cadastro de pacientes",
       "Prontuário clínico completo",
+      "Fichas de anamnese",
       "Cadastro de serviços e procedimentos",
       "Cobranças e controle financeiro",
       "Suporte por e-mail e WhatsApp",
@@ -244,7 +247,9 @@ export const pricingPlans = [
     features: [
       "Profissionais ilimitados",
       "Tudo do plano Solo",
+      "Fichas de anamnese",
       "Agenda de atendimentos",
+      "Lembretes de agenda via WhatsApp",
       "Usuários e permissões por perfil",
       "Relatórios financeiros avançados",
       "Suporte prioritário com canal dedicado",
@@ -255,8 +260,10 @@ export const pricingPlans = [
 export const comparisonFeatures = [
   { label: "Profissionais (dentistas)", solo: "1", clinica: "Ilimitados" },
   { label: "Agenda de atendimentos", solo: false, clinica: true },
+  { label: "Lembretes de agenda via WhatsApp", solo: false, clinica: true },
   { label: "Cadastro de pacientes", solo: true, clinica: true },
   { label: "Prontuário clínico completo", solo: true, clinica: true },
+  { label: "Fichas de anamnese", solo: true, clinica: true },
   { label: "Serviços e procedimentos", solo: true, clinica: true },
   { label: "Cobranças e financeiro", solo: true, clinica: true },
   { label: "Usuários e permissões por perfil", solo: false, clinica: true },
@@ -268,7 +275,21 @@ export const comparisonFeatures = [
   },
 ];
 
+const newServicesFaq = [
+  {
+    question: "Os lembretes de agenda via WhatsApp estão em qual plano?",
+    answer:
+      "Os lembretes de agenda via WhatsApp são exclusivos do plano Clínica/Pro e servem para avisar os pacientes sobre seus agendamentos.",
+  },
+  {
+    question: "As fichas de anamnese estão incluídas nos dois planos?",
+    answer:
+      "Sim. As fichas de anamnese estão disponíveis nos planos Solo e Clínica/Pro para registrar as informações de saúde do paciente e apoiar o atendimento.",
+  },
+];
+
 export const pricingFaq = [
+  ...newServicesFaq,
   {
     question: "Preciso instalar algum programa para usar o Smilo?",
     answer:
@@ -282,7 +303,7 @@ export const pricingFaq = [
   {
     question: "Existe limite de pacientes cadastrados?",
     answer:
-      "Não há limite de pacientes em nenhum plano. A diferença entre os planos está no número de profissionais e nos recursos de gestão de equipe e suporte.",
+      "Não há limite de pacientes em nenhum plano, e ambos incluem fichas de anamnese. O Clínica/Pro também inclui agenda de atendimentos, lembretes de agenda via WhatsApp e recursos de gestão de equipe e suporte prioritário.",
   },
   {
     question: "Como funciona o suporte?",
@@ -297,6 +318,7 @@ export const pricingFaq = [
 ];
 
 export const generalFaq = [
+  ...newServicesFaq,
   {
     question: "O Smilo serve para clínicas com mais de um dentista?",
     answer:
