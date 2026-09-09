@@ -82,7 +82,7 @@ export default function PrecosPage() {
           <SectionHeading
             eyebrow="Comparativo"
             title="Compare os recursos de cada plano"
-            description="Todos os planos incluem prontuário clínico e cobranças. A diferença está no tamanho da equipe e nos recursos de gestão."
+            description="Todos os planos incluem prontuário clínico, fichas de anamnese e cobranças. No Clínica/Pro, você também conta com lembretes de agenda via WhatsApp e recursos de gestão de equipe."
           />
           <div className="mt-12">
             <ComparisonTable />
