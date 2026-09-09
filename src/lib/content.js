@@ -247,7 +247,6 @@ export const pricingPlans = [
     features: [
       "Profissionais ilimitados",
       "Tudo do plano Solo",
-      "Fichas de anamnese",
       "Agenda de atendimentos",
       "Lembretes de agenda via WhatsApp",
       "Usuários e permissões por perfil",
