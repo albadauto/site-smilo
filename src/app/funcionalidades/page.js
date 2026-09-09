@@ -8,7 +8,7 @@ import { createBreadcrumbJsonLd, createPageMetadata } from "@/lib/seo";
 
 const title = "Funcionalidades | Smilo CRM Odontológico";
 const description =
-  "Conheça os módulos do Smilo CRM: agenda, pacientes, prontuário, cobranças, profissionais, serviços, usuários e gestão da clínica odontológica.";
+  "Conheça os recursos do Smilo CRM: agenda, lembretes via WhatsApp no Pro, fichas de anamnese, pacientes, prontuário e gestão da clínica odontológica.";
 
 export const metadata = createPageMetadata({ title, description, path: "/funcionalidades" });
 

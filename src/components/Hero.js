@@ -8,6 +8,7 @@ import { whatsappLink, defaultWhatsappMessage } from "@/lib/site";
 const floatingBadges = [
   { icon: "CalendarDays", label: "Agenda sempre organizada" },
   { icon: "CreditCard", label: "Cobranças automáticas" },
+  { icon: "WhatsApp", label: "Lembretes de agenda via WhatsApp" },
 ];
 
 export default function Hero() {
@@ -85,6 +86,17 @@ export default function Hero() {
                 <Icon name={floatingBadges[1].icon} className="h-4 w-4" />
               </span>
               <span className="text-xs font-medium text-white/85">{floatingBadges[1].label}</span>
+            </div>
+          </div>
+          <div className="pointer-events-none relative mx-auto mt-4 w-fit max-w-full rounded-2xl border border-white/10 bg-ink-900/90 px-4 py-3 text-left shadow-2xl backdrop-blur sm:absolute sm:-bottom-6 sm:left-8 sm:mt-0 sm:rotate-[-2deg]">
+            <div className="flex items-center gap-2.5">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white text-ink-950">
+                <Icon name={floatingBadges[2].icon} className="h-4 w-4" />
+              </span>
+              <div>
+                <span className="block text-xs font-medium text-white/85">{floatingBadges[2].label}</span>
+                <span className="mt-1 block text-[10px] font-medium text-white/60">Exclusivo do Clínica/Pro</span>
+              </div>
             </div>
           </div>
         </div>

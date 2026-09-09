@@ -1,8 +1,9 @@
 import Container from "./Container";
 import Icon from "./Icon";
+import { modules } from "@/lib/content";
 
 const stats = [
-  { icon: "Layers", value: "9", label: "Módulos integrados em um só sistema" },
+  { icon: "Layers", value: String(modules.length), label: "Módulos integrados em um só sistema" },
   { icon: "Sparkles", value: "100%", label: "Funciona pelo navegador, sem instalação" },
   { icon: "UserCog", value: "3", label: "Níveis de permissão por perfil de usuário" },
   { icon: "Clock", value: "9h–18h", label: "Suporte por e-mail e WhatsApp, seg. a sex." },

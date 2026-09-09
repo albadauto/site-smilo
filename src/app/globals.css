@@ -55,6 +55,51 @@
   }
 }
 
+.benefits-marquee-viewport {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
+}
+
+.benefits-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 65s linear infinite;
+}
+
+.benefits-marquee-list {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.benefits-marquee-viewport:hover .benefits-marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .benefits-marquee-track {
+    width: 100%;
+    animation: none;
+  }
+
+  .benefits-marquee-list {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .benefits-marquee-list li {
+    white-space: normal;
+  }
+
+  .benefits-marquee-list[aria-hidden="true"] {
+    display: none;
+  }
+
+  .benefits-marquee-viewport {
+    mask-image: none;
+  }
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;
