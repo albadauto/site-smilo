@@ -23,6 +23,24 @@ export const modules = [
     imageAlt: "Dashboard geral do Smilo CRM com indicadores de pacientes, prontuários e pagamentos",
   },
   {
+    slug: "lembretes-whatsapp",
+    icon: "WhatsApp",
+    name: "Lembretes de agenda via WhatsApp",
+    short: "Avise os pacientes sobre seus agendamentos pelo WhatsApp. Exclusivo do Clínica/Pro.",
+    description:
+      "Mantenha seus pacientes informados sobre os próximos atendimentos com lembretes de agenda via WhatsApp. Um recurso exclusivo do plano Clínica/Pro para facilitar a comunicação da clínica antes de cada consulta.",
+    bullets: [
+      "Avisos sobre os agendamentos pelo WhatsApp",
+      "Mais praticidade na comunicação com o paciente",
+      "Disponível exclusivamente no plano Clínica/Pro",
+    ],
+    image: "/images/screens/lembrete-whatsapp.svg",
+    imageWidth: 1000,
+    imageHeight: 800,
+    imageAlt: "Ilustração de conversa no WhatsApp com foto de perfil da Smilo, lembrando a paciente de uma consulta na Clínica Sorriso amanhã às 14h30. Recurso exclusivo do Clínica/Pro",
+    illustration: true,
+  },
+  {
     slug: "pacientes",
     icon: "Users",
     name: "Gestão de pacientes",

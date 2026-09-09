@@ -41,7 +41,7 @@ export default function ModuleShowcase({ module, index }) {
 
       <div className={reversed ? "lg:order-1" : "lg:order-2"}>
         <div className="browser-frame">
-          <BrowserChrome />
+          {!module.illustration && <BrowserChrome />}
           <div className="bg-ink-50">
             <Image
               src={module.image}
