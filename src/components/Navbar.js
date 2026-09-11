@@ -6,8 +6,9 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Icon from "./Icon";
 import Button from "./Button";
+import { ShinyButton } from "./ui/shiny-button";
 import Container from "./Container";
-import { navLinks, whatsappLink, defaultWhatsappMessage } from "@/lib/site";
+import { navLinks } from "@/lib/site";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -62,16 +63,14 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Button href={plansHref} data-button-location="header" onClick={() => setOpen(false)} className="!px-4 !py-2.5 text-sm">
-           Ver Planos
-          </Button>
+          <ShinyButton href={plansHref} data-button-location="header" onClick={() => setOpen(false)} className="!px-4 !py-2.5 text-sm">Teste Grátis</ShinyButton>
           <Button
             href="https://app.smilocrm.com.br/login"
           external
           variant="outline"
           className="!px-4 !py-2.5 text-sm"
            icon="LogIn" target="_blank">
-            Acessar
+            Sou cliente
           </Button>
           
         </div>
@@ -101,16 +100,14 @@ export default function Navbar() {
               </Link>
             ))}
            <div className="mt-3 flex flex-wrap items-center gap-3">
-          <Button href={plansHref} data-button-location="header_mobile" onClick={() => setOpen(false)} className="!px-4 !py-2.5 text-sm">
-           Ver Planos
-          </Button>
+          <ShinyButton href={plansHref} data-button-location="header_mobile" onClick={() => setOpen(false)} className="!px-4 !py-2.5 text-sm">Teste Grátis</ShinyButton>
           <Button
             href="https://app.smilocrm.com.br/login"
           external
           variant="outline"
           className="!px-4 !py-2.5 text-sm"
            icon="LogIn" target="_blank">
-            Acessar
+            Sou cliente
           </Button>
           
         </div>

@@ -1,9 +1,10 @@
 import Icon from "./Icon";
 import Button from "./Button";
-import { whatsappLink } from "@/lib/site";
+import { ShinyButton } from "./ui/shiny-button";
 
 export default function PricingCard({ plan, headingLevel = 2, buttonLocation = "pricing_page" }) {
-  const message = `Olá! Quero assinar o plano ${plan.name} do Smilo (R$${plan.price}${plan.priceSuffix}).`;
+  const isSolo = plan.id === "solo";
+  const PlanButton = isSolo ? ShinyButton : Button;
   const Heading = headingLevel === 3 ? "h3" : "h2";
 
   return (
@@ -11,11 +12,11 @@ export default function PricingCard({ plan, headingLevel = 2, buttonLocation = "
       className={`relative flex h-full flex-col rounded-3xl p-8 ${
         plan.highlighted
           ? "bg-ink-950 text-white shadow-[0_30px_60px_-24px_rgba(0,0,0,0.5)]"
-          : "border border-ink-200 bg-white text-ink-950"
+          : "border-2 border-green-500 bg-white text-ink-950 shadow-[0_16px_40px_-24px_rgba(34,197,94,0.4)]"
       }`}
     >
       {plan.badge ? (
-        <span className="absolute -top-3.5 left-8 rounded-full bg-white px-3.5 py-1 text-xs font-semibold text-ink-950 shadow-sm">
+        <span className={`absolute -top-3.5 left-8 z-10 rounded-full px-3.5 py-1 text-xs font-semibold shadow-sm ${isSolo ? "bg-green-600 text-white ring-4 ring-white" : "bg-white text-ink-950"}`}>
           {plan.badge}
         </span>
       ) : null}
@@ -36,25 +37,25 @@ export default function PricingCard({ plan, headingLevel = 2, buttonLocation = "
         por clínica, cobrado mensalmente
       </p>
 
-      <Button
+      <PlanButton
         href={plan.ctaHref}
         data-track-plan-click="true"
         data-button-name={plan.ctaLabel}
         data-button-location={buttonLocation}
         external
-        variant={plan.highlighted ? "inverse" : "primary"}
+        {...(!isSolo ? { variant: "inverse" } : {})}
         className="mt-7 w-full"
         icon="ArrowRight"
       >
         {plan.ctaLabel}
-      </Button>
+      </PlanButton>
 
       <ul className="mt-8 flex-1 space-y-3.5">
         {plan.features.map((feature) => (
           <li key={feature} className="flex items-start gap-3 text-sm leading-relaxed">
             <span
               className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full ${
-                plan.highlighted ? "bg-white text-ink-950" : "bg-ink-950 text-white"
+                plan.highlighted ? "bg-white text-ink-950" : "bg-green-100 text-green-700"
               }`}
             >
               <Icon name="Check" className="h-3 w-3" strokeWidth={2.5} />

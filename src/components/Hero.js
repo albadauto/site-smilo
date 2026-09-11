@@ -20,13 +20,14 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      <Container className="relative flex flex-col items-center gap-8 pb-20 pt-16 text-center sm:pb-28 sm:pt-24">
+      <Container className="relative grid items-center gap-12 pb-20 pt-16 sm:pb-28 sm:pt-24 lg:grid-cols-2 lg:gap-14">
+        <div className="flex min-w-0 flex-col items-start gap-7 text-left">
         <Eyebrow tone="dark">
           <Icon name="Sparkles" className="h-3.5 w-3.5" />
           Feito para clínicas odontológicas brasileiras
         </Eyebrow>
 
-        <h1 className="max-w-4xl text-balance text-4xl font-semibold leading-[1.08] tracking-tight sm:text-6xl">
+        <h1 className="max-w-4xl text-balance text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl xl:text-6xl">
           O sistema de gestão que sua clínica odontológica merece
         </h1>
 
@@ -36,7 +37,7 @@ export default function Hero() {
           tudo pelo navegador, sem planilhas soltas.
         </p>
 
-        <div className="flex flex-col items-center gap-3 sm:flex-row">
+        <div className="flex w-full flex-col items-stretch gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center">
           <Button
             href={whatsappLink(defaultWhatsappMessage)}
             external
@@ -50,7 +51,9 @@ export default function Hero() {
           </Button>
         </div>
 
-        <div className="relative mt-8 w-full max-w-4xl">
+        </div>
+
+        <div className="relative w-full min-w-0">
           <div className="browser-frame border border-white/12 ">
             <div className="flex items-center gap-1.5 border-b border-white/10 bg-ink-900 px-4 py-3">
               <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
@@ -67,11 +70,11 @@ export default function Hero() {
               height={900}
               priority
               className="w-full max-w-xl p-2 mx-auto"
-              sizes="(min-width: 1024px) 960px, 100vw"
+              sizes="(min-width: 1280px) 580px, (min-width: 1024px) 50vw, 100vw"
             />
           </div>
 
-          <div className="pointer-events-none absolute -left-4 top-10 hidden rotate-[-4deg] rounded-2xl border border-white/10 bg-ink-900/90 px-4 py-3 text-left shadow-2xl backdrop-blur sm:-left-10 sm:block">
+          <div className="pointer-events-none absolute -left-4 top-10 hidden rotate-[-4deg] rounded-2xl border border-white/10 bg-ink-900/90 px-4 py-3 text-left shadow-2xl backdrop-blur sm:-left-4 sm:block">
             <div className="flex items-center gap-2.5">
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white text-ink-950">
                 <Icon name={floatingBadges[0].icon} className="h-4 w-4" />
@@ -80,7 +83,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="pointer-events-none absolute -right-4 bottom-10 hidden rotate-[3deg] rounded-2xl border border-white/10 bg-ink-900/90 px-4 py-3 text-left shadow-2xl backdrop-blur sm:-right-10 sm:block">
+          <div className="pointer-events-none absolute -right-4 bottom-10 hidden rotate-[3deg] rounded-2xl border border-white/10 bg-ink-900/90 px-4 py-3 text-left shadow-2xl backdrop-blur sm:-right-4 sm:block">
             <div className="flex items-center gap-2.5">
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white text-ink-950">
                 <Icon name={floatingBadges[1].icon} className="h-4 w-4" />

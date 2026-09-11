@@ -6,7 +6,7 @@ const benefits = [
   { icon: "Users", label: "Cadastro de pacientes" },
   { icon: "ClipboardList", label: "Prontuário clínico completo" },
   { icon: "CreditCard", label: "Cobranças e controle financeiro" },
-  { icon: "CalendarDays", label: "Agenda de atendimentos", pro: true },
+  { icon: "CalendarDays", label: "Agenda de atendimentos", pro: false },
   { icon: "Layers", label: "Serviços e procedimentos" },
   { icon: "UserCog", label: "Permissões por perfil", pro: true },
 ];

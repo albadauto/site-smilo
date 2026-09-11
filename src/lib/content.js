@@ -240,10 +240,12 @@ export const pricingPlans = [
     price: "89",
     priceSuffix: "/mês",
     highlighted: false,
-    ctaLabel: "Começar com o Solo",
+    badge: "7 dias grátis",
+    ctaLabel: "Grátis por 7 dias",
     ctaHref:"https://app.smilocrm.com.br/cadastro?plano=solo",
     features: [
       "1 profissional",
+      "Agenda de atendimentos",
       "Cadastro de pacientes",
       "Prontuário clínico completo",
       "Fichas de anamnese",
@@ -265,7 +267,6 @@ export const pricingPlans = [
     features: [
       "Profissionais ilimitados",
       "Tudo do plano Solo",
-      "Agenda de atendimentos",
       "Lembretes de agenda via WhatsApp",
       "Usuários e permissões por perfil",
       "Relatórios financeiros avançados",
@@ -276,7 +277,7 @@ export const pricingPlans = [
 
 export const comparisonFeatures = [
   { label: "Profissionais (dentistas)", solo: "1", clinica: "Ilimitados" },
-  { label: "Agenda de atendimentos", solo: false, clinica: true },
+  { label: "Agenda de atendimentos", solo: true, clinica: true },
   { label: "Lembretes de agenda via WhatsApp", solo: false, clinica: true },
   { label: "Cadastro de pacientes", solo: true, clinica: true },
   { label: "Prontuário clínico completo", solo: true, clinica: true },
