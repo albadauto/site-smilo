@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Icon from "./Icon";
+import InteractivePhone from "./InteractivePhone";
 
 function BrowserChrome() {
   return (
@@ -40,7 +41,7 @@ export default function ModuleShowcase({ module, index }) {
       </div>
 
       <div className={reversed ? "lg:order-1" : "lg:order-2"}>
-        <div className="browser-frame">
+        {module.slug === "lembretes-whatsapp" ? <InteractivePhone /> : <div className="browser-frame">
           {!module.illustration && <BrowserChrome />}
           <div className="bg-ink-50">
             <Image
@@ -52,7 +53,7 @@ export default function ModuleShowcase({ module, index }) {
               sizes="(min-width: 1024px) 560px, 100vw"
             />
           </div>
-        </div>
+        </div>}
         {module.secondaryImage ? (
           <div className="browser-frame mt-5">
             <BrowserChrome />

@@ -19,16 +19,15 @@ export default function BenefitsMarquee() {
           Nos planos Solo e Pro <span className="mx-1 text-white/30">/</span> Selo Pro: exclusivo do Clínica/Pro
         </p>
       </div>
-      <div className="benefits-marquee-viewport">
+      <div className="benefits-marquee-viewport py-5 sm:py-6">
         <div className="benefits-marquee-track">
           {[false, true].map((duplicate) => (
             <ul key={String(duplicate)} aria-hidden={duplicate ? true : undefined} className="benefits-marquee-list">
               {benefits.map(({ icon, label, pro }) => (
-                <li key={label} className="flex shrink-0 items-center gap-3 whitespace-nowrap px-6 py-6 sm:px-8">
-                  <Icon name={icon} className="h-5 w-5 shrink-0 text-white/65" />
+                <li key={label} className="flex shrink-0 items-center gap-3 whitespace-nowrap rounded-full border border-white/20 bg-ink-700 px-5 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] sm:px-6">
+                  <Icon name={icon} className="h-5 w-5 shrink-0 text-white/80" />
                   <span className="text-sm font-medium tracking-tight sm:text-base">{label}</span>
                   {pro && <span className="rounded-full border border-white/25 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white/75">Pro</span>}
-                  <span aria-hidden="true" className="ml-6 h-1 w-1 rounded-full bg-white/25 sm:ml-8" />
                 </li>
               ))}
             </ul>
