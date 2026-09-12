@@ -40,6 +40,7 @@ export default function Hero() {
         <div className="flex w-full flex-col items-stretch gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center">
           <Button
             href={whatsappLink(defaultWhatsappMessage)}
+            data-button-location="hero_whatsapp"
             external
             variant="inverse"
             icon="WhatsApp"
