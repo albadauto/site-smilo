@@ -40,6 +40,9 @@ export default function PricingCard({ plan, headingLevel = 2, buttonLocation = "
       <PlanButton
         href={plan.ctaHref}
         data-track-plan-click="true"
+        data-track-free-trial-click={isSolo ? "true" : undefined}
+        data-track-pro-plan-click={!isSolo ? "true" : undefined}
+        data-plan-name={plan.id}
         data-button-name={plan.ctaLabel}
         data-button-location={buttonLocation}
         external

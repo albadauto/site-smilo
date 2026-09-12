@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect } from "react";
-import { trackPlanClick } from "@/lib/analytics.mjs";
+import { trackClick } from "@/lib/analytics.mjs";
 
 export default function PlanClickTracking() {
   useEffect(() => {
     function handleClick(event) {
       if (event.target instanceof Element) {
-        trackPlanClick(event.target.closest("a[href]"));
+        trackClick(event.target.closest("a[href]"));
       }
     }
 

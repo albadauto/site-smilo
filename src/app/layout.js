@@ -141,7 +141,7 @@ export default function RootLayout({ children }) {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-18437044843');
-            gtag('config', 'G-JCVRV0TW3H');
+            gtag('config', 'G-384RCVBJBY');
           `}
         </Script>
         <JsonLd data={organizationJsonLd} />
