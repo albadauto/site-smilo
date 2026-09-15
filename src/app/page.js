@@ -14,9 +14,9 @@ import { modules, generalFaq } from "@/lib/content";
 import JsonLd from "@/components/JsonLd";
 import { createPageMetadata } from "@/lib/seo";
 
-const title = "Smilo CRM | Sistema para Clínicas Odontológicas";
+const title = "Smilo CRM | Software de Gestão Odontológica para Clínicas";
 const description =
-  "Gerencie agenda, prontuários, pacientes, cobranças e financeiro da sua clínica odontológica em um só lugar com o Smilo CRM.";
+  "Smilo é o software de gestão odontológica completo: agenda, prontuário eletrônico, pacientes, cobranças e financeiro em um só sistema. Teste grátis por 7 dias.";
 
 export const metadata = createPageMetadata({ title, description, path: "/" });
 

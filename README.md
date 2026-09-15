@@ -10,7 +10,8 @@ branco**, moderno, alinhado à identidade da marca.
 | --- | --- |
 | `/` | Home — hero, funcionalidades, destaques, segurança, preços resumidos, FAQ |
 | `/funcionalidades` | Todos os 9 módulos do sistema, com telas reais do manual |
-| `/precos` | Planos Solo (R$89/mês), Clínica (R$169/mês) e Pro (R$249/mês) + comparativo |
+| `/precos` | Planos Solo (R$89/mês) e Clínica/Pro (R$199/mês) + comparativo |
+| `/blog` | Artigos de SEO sobre gestão odontológica, prontuário eletrônico, lembretes via WhatsApp e preços de software odontológico |
 | `/sobre` | Missão, princípios e a empresa por trás do produto |
 | `/contato` | E-mail, WhatsApp, horário de atendimento e formulário de contato |
 
@@ -54,8 +55,7 @@ servidor próprio com `next start`, etc.
 2. **WhatsApp / e-mail / telefone** — também em `src/lib/site.js` (`whatsappNumber`, `email`,
    `phone`, `supportHours`).
 3. **Preços** — em `src/lib/content.js`, no array `pricingPlans` (e `comparisonFeatures` para o
-   comparativo de recursos). Os valores atuais são: Solo R$89/mês, Clínica R$169/mês e Pro
-   R$249/mês.
+   comparativo de recursos). Os valores atuais são: Solo R$89/mês e Clínica/Pro R$199/mês.
 4. **Textos de funcionalidades** — também em `src/lib/content.js`, no array `modules`. Cada
    módulo tem `name`, `short` (usado nos cards), `description` e `bullets`.
 5. **Formulário de contato** (`src/components/ContactForm.js`) — hoje ele abre o app de e-mail do
@@ -74,9 +74,14 @@ servidor próprio com `next start`, etc.
 - **Sitemap automático** em `/sitemap.xml` (`src/app/sitemap.js`) e **robots.txt** em `/robots.txt`
   (`src/app/robots.js`), apontando para o domínio configurado em `site.js`.
 - **Dados estruturados (JSON-LD)**: `Organization` e `WebSite` no layout raiz,
-  `SoftwareApplication` com as três ofertas de preço, `Product`/`Offer` na página de preços,
-  `FAQPage` na página de preços e `BreadcrumbList` na página de funcionalidades. Isso ajuda o
+  `SoftwareApplication` com as ofertas de preço, `Product`/`Offer` na página de preços,
+  `FAQPage` na home e na página de preços, `BreadcrumbList` em todas as páginas internas
+  (incluindo cada post do blog) e `Blog`/`BlogPosting` nas páginas do blog. Isso ajuda o
   Google a exibir rich snippets (preço, FAQ, etc.) diretamente no resultado de busca.
+- **Blog** (`/blog`, conteúdo em `src/lib/blog.js`) — artigos escritos para a palavra-chave
+  "software de gestão odontológica" e termos relacionados (prontuário eletrônico, lembrete via
+  WhatsApp, preço de software odontológico). É o principal motor de tráfego orgânico do site:
+  publicar novos artigos com frequência é o que mais ajuda a subir no Google a médio prazo.
 - **HTML semântico** — hierarquia de `h1`/`h2`/`h3` correta em cada página, um único `<h1>` por
   página, texto alternativo (`alt`) descritivo em todas as imagens/telas do sistema.
 - **Performance**: imagens otimizadas automaticamente pelo `next/image` (lazy loading,
@@ -107,6 +112,7 @@ src/
   lib/
     site.js        → dados da marca, contato, links de navegação
     content.js      → funcionalidades, planos, comparativo e FAQ
+    blog.js        → posts do blog (título, meta description, conteúdo)
 public/
   images/
     brand/          → logo, ícones, imagem de compartilhamento (Open Graph)

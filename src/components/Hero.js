@@ -28,7 +28,7 @@ export default function Hero() {
         </Eyebrow>
 
         <h1 className="max-w-4xl text-balance text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl xl:text-6xl">
-          O sistema de gestão que sua clínica odontológica merece
+          O software de gestão odontológica que sua clínica merece
         </h1>
 
         <p className="max-w-2xl text-balance text-base leading-relaxed text-white/65 sm:text-lg">

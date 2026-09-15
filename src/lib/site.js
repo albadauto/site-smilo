@@ -6,9 +6,9 @@ export const siteConfig = {
   name: "Smilo",
   fullName: "Smilo CRM",
   legalName: "Mindit Soluções Digitais",
-  tagline: "O sistema de gestão que sua clínica odontológica merece",
+  tagline: "O software de gestão odontológica que sua clínica merece",
   description:
-    "Smilo CRM para clínicas odontológicas: agenda, prontuário, pacientes, cobranças e financeiro em um só sistema. Organize sua clínica com simplicidade.",
+    "Smilo é o software de gestão odontológica completo: agenda, prontuário eletrônico, pacientes, cobranças e financeiro em um só sistema. Teste grátis por 7 dias.",
   url: "https://www.smilocrm.com.br",
   domain: "smilocrm.com.br",
   ogImage: "/images/brand/og-image.png",
@@ -19,6 +19,7 @@ export const siteConfig = {
   whatsappNumber: "5511949214071",
   supportHours: "Segunda a sexta-feira, das 9h às 18h",
   keywords: [
+    "software de gestão odontológica",
     "sistema para clínica odontológica",
     "CRM odontológico",
     "software para dentista",
@@ -40,6 +41,7 @@ export function whatsappLink(message) {
 export const navLinks = [
   { href: "/funcionalidades", label: "Funcionalidades" },
   { href: "/precos", label: "Preços" },
+  { href: "/blog", label: "Blog" },
   { href: "/sobre", label: "Sobre" },
   { href: "/contato", label: "Contato" },
 ];

@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Smilo CRM | Sistema para Clínicas Odontológicas",
+    default: "Smilo CRM | Software de Gestão Odontológica",
     template: "%s | Smilo CRM",
   },
   description: siteConfig.description,
@@ -32,7 +32,7 @@ export const metadata = {
     locale: siteConfig.locale,
     url: siteConfig.url,
     siteName: siteConfig.fullName,
-    title: "Smilo CRM | Sistema para Clínicas Odontológicas",
+    title: "Smilo CRM | Software de Gestão Odontológica",
     description: siteConfig.description,
     images: [
       {
@@ -45,7 +45,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Smilo CRM | Sistema para Clínicas Odontológicas",
+    title: "Smilo CRM | Software de Gestão Odontológica",
     description: siteConfig.description,
     images: [siteConfig.ogImage],
   },
