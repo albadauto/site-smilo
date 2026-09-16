@@ -14,11 +14,6 @@ const benefits = [
 export default function BenefitsMarquee() {
   return (
     <section aria-label="Benefícios dos planos" className="benefits-marquee border-t border-white/15 bg-ink-900 text-white">
-      <div className="flex items-center justify-between gap-4 border-b border-white/10 px-5 py-3 sm:px-8">
-        <p className="text-xs font-medium text-white/60">
-          Nos planos Solo e Pro <span className="mx-1 text-white/30">/</span> Selo Pro: exclusivo do Clínica/Pro
-        </p>
-      </div>
       <div className="benefits-marquee-viewport py-5 sm:py-6">
         <div className="benefits-marquee-track">
           {[false, true].map((duplicate) => (

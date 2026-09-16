@@ -63,16 +63,25 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <ShinyButton href={plansHref} data-track-free-trial-click="true" data-button-location="header" onClick={() => setOpen(false)} className="!px-4 !py-2.5 text-sm">Teste Grátis</ShinyButton>
           <Button
             href="https://app.smilocrm.com.br/login"
-          external
-          variant="outline"
-          className="!px-4 !py-2.5 text-sm"
-           icon="LogIn" target="_blank">
+            external
+            variant="outline"
+            className="!px-4 !py-2.5 text-sm"
+            target="_blank"
+          >
+            <Icon name="LogIn" className="h-4 w-4" />
             Sou cliente
           </Button>
-          
+          <ShinyButton
+            href={plansHref}
+            data-track-free-trial-click="true"
+            data-button-location="header"
+            onClick={() => setOpen(false)}
+            className="!px-4 !py-2.5 text-sm"
+          >
+            Teste Grátis
+          </ShinyButton>
         </div>
 
         <button
@@ -99,18 +108,27 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-           <div className="mt-3 flex flex-wrap items-center gap-3">
-          <ShinyButton href={plansHref} data-track-free-trial-click="true" data-button-location="header_mobile" onClick={() => setOpen(false)} className="!px-4 !py-2.5 text-sm">Teste Grátis</ShinyButton>
-          <Button
-            href="https://app.smilocrm.com.br/login"
-          external
-          variant="outline"
-          className="!px-4 !py-2.5 text-sm"
-           icon="LogIn" target="_blank">
-            Sou cliente
-          </Button>
-          
-        </div>
+            <div className="mt-3 flex flex-wrap items-center gap-3">
+              <Button
+                href="https://app.smilocrm.com.br/login"
+                external
+                variant="outline"
+                className="!px-4 !py-2.5 text-sm"
+                target="_blank"
+              >
+                <Icon name="LogIn" className="h-4 w-4" />
+                Sou cliente
+              </Button>
+              <ShinyButton
+                href={plansHref}
+                data-track-free-trial-click="true"
+                data-button-location="header_mobile"
+                onClick={() => setOpen(false)}
+                className="!px-4 !py-2.5 text-sm"
+              >
+                Teste Grátis
+              </ShinyButton>
+            </div>
           </Container>
         </div>
       ) : null}

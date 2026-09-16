@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Icon from "./Icon";
 
-export default function FeatureCard({ icon, name, short, slug, compact = false }) {
-  const Wrapper = slug ? Link : "div";
-  const wrapperProps = slug ? { href: `/funcionalidades#${slug}` } : {};
+export default function FeatureCard({ icon, name, short, slug, href, compact = false }) {
+  const destination = href || (slug ? `/funcionalidades#${slug}` : null);
+  const Wrapper = destination ? Link : "div";
+  const wrapperProps = destination ? { href: destination } : {};
 
   return (
     <Wrapper
@@ -19,7 +20,7 @@ export default function FeatureCard({ icon, name, short, slug, compact = false }
         <h3 className="text-base font-semibold text-ink-950">{name}</h3>
         <p className="text-sm leading-relaxed text-ink-600">{short}</p>
       </div>
-      {slug ? (
+      {destination ? (
         <span className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-900">
           Saiba mais
           <Icon
