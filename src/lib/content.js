@@ -242,7 +242,7 @@ export const pricingPlans = [
     highlighted: false,
     badge: "7 dias grátis",
     ctaLabel: "Grátis por 7 dias",
-    ctaHref:"https://app.smilocrm.com.br/cadastro?plano=solo",
+    ctaHref:"https://app.smilo.com.br/cadastro?plano=solo",
     features: [
       "1 profissional",
       "Agenda de atendimentos",
@@ -263,7 +263,7 @@ export const pricingPlans = [
     highlighted: true,
     badge: "Mais escolhido",
     ctaLabel: "Começar com o Clínica/Pro",
-    ctaHref:"https://app.smilocrm.com.br/cadastro?plano=pro",
+    ctaHref:"https://app.smilo.com.br/cadastro?plano=pro",
     features: [
       "Profissionais ilimitados",
       "Tudo do plano Solo",

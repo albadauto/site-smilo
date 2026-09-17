@@ -34,7 +34,7 @@ test("tracks plan signup buttons and keeps the Google Ads conversion", () => {
   for (const page of ["/precos", "/"]) {
     for (const plan of ["solo", "pro"]) {
       const calls = [];
-      const cta = link(`https://app.smilocrm.com.br/cadastro?plano=${plan}`);
+      const cta = link(`https://app.smilo.com.br/cadastro?plano=${plan}`);
       const originalHref = cta.href;
       cta.dataset = {
         trackPlanClick: "true",

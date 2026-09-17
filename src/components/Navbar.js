@@ -65,7 +65,7 @@ export default function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <ShinyButton href={plansHref} data-track-free-trial-click="true" data-button-location="header" onClick={() => setOpen(false)} className="!px-4 !py-2.5 text-sm">Teste Grátis</ShinyButton>
           <Button
-            href="https://app.smilocrm.com.br/login"
+            href="https://app.smilo.com.br/login"
           external
           variant="outline"
           className="!px-4 !py-2.5 text-sm"
@@ -102,7 +102,7 @@ export default function Navbar() {
            <div className="mt-3 flex flex-wrap items-center gap-3">
           <ShinyButton href={plansHref} data-track-free-trial-click="true" data-button-location="header_mobile" onClick={() => setOpen(false)} className="!px-4 !py-2.5 text-sm">Teste Grátis</ShinyButton>
           <Button
-            href="https://app.smilocrm.com.br/login"
+            href="https://app.smilo.com.br/login"
           external
           variant="outline"
           className="!px-4 !py-2.5 text-sm"
