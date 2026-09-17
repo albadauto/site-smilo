@@ -52,6 +52,13 @@ export default function PricingCard({ plan, headingLevel = 2, buttonLocation = "
       >
         {plan.ctaLabel}
       </PlanButton>
+      <p
+        className={`mt-[5px] text-center text-xs ${
+          plan.highlighted ? "text-white/50" : "text-ink-500"
+        }`}
+      >
+        Cancele a qualquer momento
+      </p>
 
       <ul className="mt-8 flex-1 space-y-3.5">
         {plan.features.map((feature) => (

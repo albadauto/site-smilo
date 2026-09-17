@@ -17,6 +17,7 @@ export const siteConfig = {
   phone: "(11) 94921-4071",
   phoneE164: "+5511949214071",
   whatsappNumber: "5511949214071",
+  freeTrialUrl: "https://app.smilocrm.com.br/cadastro?plano=solo",
   supportHours: "Segunda a sexta-feira, das 9h às 18h",
   keywords: [
     "software de gestão odontológica",

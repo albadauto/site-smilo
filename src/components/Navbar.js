@@ -63,7 +63,6 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <ShinyButton href={plansHref} data-track-free-trial-click="true" data-button-location="header" onClick={() => setOpen(false)} className="!px-4 !py-2.5 text-sm">Teste Grátis</ShinyButton>
           <Button
             href="https://app.smilo.com.br/login"
           external
@@ -72,7 +71,15 @@ export default function Navbar() {
            icon="LogIn" target="_blank">
             Sou cliente
           </Button>
-          
+          <ShinyButton
+            href={plansHref}
+            data-track-free-trial-click="true"
+            data-button-location="header"
+            onClick={() => setOpen(false)}
+            className="!px-4 !py-2.5 text-sm"
+          >
+            Teste Grátis
+          </ShinyButton>
         </div>
 
         <button
