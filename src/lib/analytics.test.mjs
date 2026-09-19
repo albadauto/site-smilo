@@ -3,7 +3,7 @@ import test from "node:test";
 import { trackPlanClick } from "./analytics.mjs";
 
 const link = (href) => ({ href, textContent: " Ver planos ", dataset: { buttonLocation: "hero" } });
-const location = new URL("https://www.smilocrm.com.br/funcionalidades");
+const location = new URL("https://smilo.com.br/funcionalidades");
 
 test("sends the event and source parameters for pricing and plan section links", () => {
   for (const href of ["/precos", "/precos/", "/#planos"]) {

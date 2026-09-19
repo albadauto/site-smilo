@@ -16,8 +16,10 @@ export default function PricingCard({ plan, headingLevel = 2, buttonLocation = "
       }`}
     >
       {plan.badge ? (
-        <span className={`absolute -top-3.5 left-8 z-10 rounded-full px-3.5 py-1 text-xs font-semibold shadow-sm ${isSolo ? "bg-green-600 text-white ring-4 ring-white" : "bg-white text-ink-950"}`}>
+        <span className={`absolute -top-3.5 left-8 z-10 flex items-center gap-1.5 rounded-full px-3.5 py-1 text-xs font-semibold shadow-sm ${isSolo ? "bg-green-600 text-white ring-4 ring-white" : "bg-white text-ink-950"}`}>
+          {!isSolo ? <span aria-hidden="true">🔥</span> : null}
           {plan.badge}
+          {!isSolo ? <span aria-hidden="true">🔥</span> : null}
         </span>
       ) : null}
 

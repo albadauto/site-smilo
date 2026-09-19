@@ -659,7 +659,7 @@ export const lembreteConsultaWhatsappPage = {
       "Mantenha os pacientes informados sobre os próximos atendimentos e facilite a comunicação da clínica antes de cada consulta.",
   },
   introPrimaryAction: {
-    href: "https://app.smilocrm.com.br/cadastro?plano=pro",
+    href: "https://app.smilo.com.br/cadastro?plano=pro",
     label: "Começar com o Clínica/Pro",
     icon: "ArrowRight",
     external: true,
@@ -794,7 +794,7 @@ export const lembreteConsultaWhatsappPage = {
     description:
       "Conheça o plano Clínica/Pro e veja como agenda, pacientes e comunicação funcionam juntos no Smilo.",
     primaryAction: {
-      href: "https://app.smilocrm.com.br/cadastro?plano=pro",
+      href: "https://app.smilo.com.br/cadastro?plano=pro",
       label: "Começar com o Clínica/Pro",
       icon: "ArrowRight",
       external: true,

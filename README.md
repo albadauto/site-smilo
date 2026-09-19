@@ -42,7 +42,7 @@ O jeito mais simples é a [Vercel](https://vercel.com) (criadora do Next.js):
 1. Suba este projeto para um repositório no GitHub/GitLab.
 2. Importe o repositório na Vercel.
 3. A Vercel detecta o Next.js automaticamente — não é preciso configurar nada.
-4. Aponte o domínio `smilocrm.com.br` para o projeto na aba
+4. Aponte o domínio `smilo.com.br` para o projeto na aba
    **Domains** da Vercel.
 
 O projeto também funciona em qualquer host que suporte Next.js (Node.js 18+): Railway, Render,
@@ -51,7 +51,7 @@ servidor próprio com `next start`, etc.
 ## O que ajustar antes de publicar
 
 1. **Domínio real** — em `src/lib/site.js`, confira `url` e `domain`. Hoje está configurado como
-   `https://www.smilocrm.com.br`.
+   `https://smilo.com.br`.
 2. **WhatsApp / e-mail / telefone** — também em `src/lib/site.js` (`whatsappNumber`, `email`,
    `phone`, `supportHours`).
 3. **Preços** — em `src/lib/content.js`, no array `pricingPlans` (e `comparisonFeatures` para o

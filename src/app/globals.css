@@ -133,6 +133,13 @@ body {
   text-wrap: balance;
 }
 
+.social-proof-partial-star {
+  color: transparent;
+  background: linear-gradient(to right, #ffc928 72%, #d5dce5 72%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
 /* Grade sutil usada nos fundos escuros (hero, CTA final, rodapé) */
 .bg-grid-dark {
   background-image:

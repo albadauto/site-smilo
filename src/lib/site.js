@@ -9,15 +9,15 @@ export const siteConfig = {
   tagline: "O software de gestão odontológica que sua clínica merece",
   description:
     "Smilo é o software de gestão odontológica completo: agenda, prontuário eletrônico, pacientes, cobranças e financeiro em um só sistema. Teste grátis por 7 dias.",
-  url: "https://www.smilocrm.com.br",
-  domain: "smilocrm.com.br",
+  url: "https://smilo.com.br",
+  domain: "smilo.com.br",
   ogImage: "/images/brand/og-image.png",
   locale: "pt_BR",
   email: "contato@mindit.dev",
   phone: "(11) 94921-4071",
   phoneE164: "+5511949214071",
   whatsappNumber: "5511949214071",
-  freeTrialUrl: "https://app.smilocrm.com.br/cadastro?plano=solo",
+  freeTrialUrl: "https://app.smilo.com.br/cadastro?plano=solo",
   supportHours: "Segunda a sexta-feira, das 9h às 18h",
   keywords: [
     "software de gestão odontológica",

@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import SocialProofSection from "@/components/SocialProofSection";
 import BenefitsMarquee from "@/components/BenefitsMarquee";
 import StatsRow from "@/components/StatsRow";
 import Container from "@/components/Container";
@@ -7,9 +8,11 @@ import FeatureCard from "@/components/FeatureCard";
 import ModuleShowcase from "@/components/ModuleShowcase";
 import SecuritySection from "@/components/SecuritySection";
 import PricingPreview from "@/components/PricingPreview";
+import GoogleReviewsSection from "@/components/GoogleReviewsSection";
 import FaqAccordion from "@/components/FaqAccordion";
 import CtaSection from "@/components/CtaSection";
 import Button from "@/components/Button";
+import { ShinyButton } from "@/components/ui/shiny-button";
 import { modules, generalFaq } from "@/lib/content";
 import JsonLd from "@/components/JsonLd";
 import { createPageMetadata } from "@/lib/seo";
@@ -30,7 +33,32 @@ const faqJsonLd = {
   })),
 };
 
-const highlighted = modules.filter((m) => ["prontuario", "cobrancas"].includes(m.slug));
+const prontuarioModule = modules.find((module) => module.slug === "prontuario");
+const agendaModule = modules.find((module) => module.slug === "agenda");
+const highlighted = [
+  {
+    ...prontuarioModule,
+    image: "/images/screens/sistema-clinica-odontologica-prontuario-clinico.webp",
+    imageWidth: 1777,
+    imageHeight: 811,
+    imageAlt: "Odontograma no prontuário clínico do Smilo CRM",
+    secondaryImage: "/images/screens/sistema-clinica-odontologica-prontuario-clinico-anamnese.webp",
+    secondaryImageWidth: 1785,
+    secondaryImageHeight: 804,
+    secondaryImageAlt: "Ficha de anamnese no prontuário clínico do Smilo CRM",
+  },
+  {
+    ...agendaModule,
+    image: "/images/screens/sistema-clinica-odontologica-prontuario-clinico-agenda-clinica.webp",
+    imageWidth: 1801,
+    imageHeight: 817,
+    imageAlt: "Visão semanal da agenda da clínica no Smilo CRM",
+    secondaryImage: "/images/screens/sistema-clinica-odontologica-prontuario-clinico-agenda-clinica2.webp",
+    secondaryImageWidth: 1782,
+    secondaryImageHeight: 793,
+    secondaryImageAlt: "Cadastro de novo agendamento no Smilo CRM",
+  },
+];
 const whatsappReminder = modules.find((module) => module.slug === "lembretes-whatsapp");
 
 export default function HomePage() {
@@ -40,6 +68,7 @@ export default function HomePage() {
       <Hero />
       <BenefitsMarquee />
       <StatsRow />
+      <SocialProofSection />
 
       <section className="border-b border-ink-100 bg-ink-50/60 py-16 sm:py-20">
         <Container>
@@ -47,9 +76,13 @@ export default function HomePage() {
             <ModuleShowcase module={whatsappReminder} index={1} />
           </div>
           <div className="mt-8 flex justify-center">
-            <Button href="#planos" variant="outline" icon="ArrowRight">
-              Conhecer os planos
-            </Button>
+            <ShinyButton
+              href="#planos"
+              data-track-free-trial-click="true"
+              data-button-location="whatsapp_showcase"
+            >
+              Faça um teste grátis
+            </ShinyButton>
           </div>
         </Container>
       </section>
@@ -63,13 +96,16 @@ export default function HomePage() {
           />
 
           <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {modules.map((module) => (
+            {modules.filter((module) => module.slug !== "parametros").map((module) => (
               <FeatureCard
                 key={module.slug}
                 icon={module.icon}
                 name={module.name}
                 short={module.short}
                 slug={module.slug}
+                image={module.cardImage || module.image}
+                imageAlt={module.imageAlt}
+                visual={module.cardVisual}
               />
             ))}
           </div>
@@ -92,6 +128,8 @@ export default function HomePage() {
       <SecuritySection />
 
       <PricingPreview />
+
+      <GoogleReviewsSection />
 
       <section className="py-20 sm:py-28">
         <Container className="max-w-3xl">
