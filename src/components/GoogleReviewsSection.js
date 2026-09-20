@@ -26,6 +26,14 @@ const reviews = [
     author: "Raily Rodrigues",
     text: "Usei o sistemae recomendo.",
   },
+  {
+    author: "Carmen Araujo",
+    text: "Quando comecei a usar o sistema, tudo ficou mais organizado: agenda, prontuário e financeiro. O sistema é muito fácil de usar e tem tudo na plataforma. 👏",
+  },
+  {
+    author: "Luana Botelho",
+    text: "O sistema me ajudou muito nas minhas operações! Excelente!",
+  },
 ];
 
 function Stars() {

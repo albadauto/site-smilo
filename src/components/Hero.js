@@ -62,11 +62,11 @@ export default function Hero() {
               />
               <div className="overflow-hidden rounded-[0.85rem] bg-[#f5f6fa] sm:rounded-[1.15rem]">
                 <Image
-                  src="/images/screens/agenda-clinica-odontologica.png"
+                  src="/images/screens/sistema-para-clinica-odontologica-agenda.webp"
                   alt="Agenda semanal do Smilo CRM com consultas e diferentes status de atendimento"
-                  width={1541}
-                  height={822}
-                  priority
+                  width={1492}
+                  height={892}
+                  loading="eager"
                   className="h-auto w-full"
                   sizes="(min-width: 1024px) 62vw, 100vw"
                 />

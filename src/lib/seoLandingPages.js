@@ -348,9 +348,9 @@ export const anamneseOdontologicaPage = {
     imageWidth: 1784,
     imageHeight: 882,
     imageAlt: "Cadastro de paciente no Smilo CRM com campos para comorbidades e observações clínicas",
-    secondaryImage: "/images/screens/prontuario-visao2.png",
-    secondaryImageWidth: 1778,
-    secondaryImageHeight: 885,
+    secondaryImage: "/images/screens/sistema-clinica-ondontologica-prontuario-anamnese.webp",
+    secondaryImageWidth: 1408,
+    secondaryImageHeight: 864,
     secondaryImageAlt: "Visão do prontuário no Smilo CRM com informações clínicas e comorbidades do paciente",
   },
   benefits: {

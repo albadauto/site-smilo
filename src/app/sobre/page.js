@@ -69,10 +69,10 @@ export default function SobrePage() {
                   <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
                 </div>
                 <Image
-                  src="/images/screens/prontuario-visao2.png"
+                  src="/images/screens/sistema-clinica-odontologia-prontuario.webp"
                   alt="Visão geral do prontuário clínico no Smilo CRM"
-                  width={1440}
-                  height={900}
+                  width={1399}
+                  height={888}
                   className="w-full"
                   sizes="(min-width: 1024px) 560px, 100vw"
                 />
