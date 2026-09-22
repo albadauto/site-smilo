@@ -8,12 +8,11 @@ import Icon from "./Icon";
 import Button from "./Button";
 import { ShinyButton } from "./ui/shiny-button";
 import Container from "./Container";
-import { navLinks } from "@/lib/site";
+import { navLinks, siteConfig } from "@/lib/site";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const plansHref = pathname === "/" ? "#planos" : "/#planos";
   const [lastPathname, setLastPathname] = useState(pathname);
 
   if (pathname !== lastPathname) {
@@ -72,7 +71,7 @@ export default function Navbar() {
             Sou cliente
           </Button>
           <ShinyButton
-            href={plansHref}
+            href={siteConfig.freeTrialUrl}
             data-track-free-trial-click="true"
             data-button-location="header"
             onClick={() => setOpen(false)}
@@ -107,7 +106,7 @@ export default function Navbar() {
               </Link>
             ))}
            <div className="mt-3 flex flex-wrap items-center gap-3">
-          <ShinyButton href={plansHref} data-track-free-trial-click="true" data-button-location="header_mobile" onClick={() => setOpen(false)} className="!px-4 !py-2.5 text-sm">Teste Grátis</ShinyButton>
+          <ShinyButton href={siteConfig.freeTrialUrl} data-track-free-trial-click="true" data-button-location="header_mobile" onClick={() => setOpen(false)} className="!px-4 !py-2.5 text-sm">Teste Grátis</ShinyButton>
           <Button
             href="https://app.smilo.com.br/login"
           external
