@@ -12,13 +12,18 @@ const robots = {
   },
 };
 
-export function createPageMetadata({ title, description, path = "/" }) {
+export function createPageMetadata({ title, description, path = "/", article }) {
   return {
     title: { absolute: title },
     description,
     alternates: { canonical: path },
     openGraph: {
-      type: "website",
+      type: article ? "article" : "website",
+      ...(article ? {
+        publishedTime: article.date,
+        modifiedTime: article.updatedAt || article.date,
+        authors: [`${siteConfig.url}/sobre`],
+      } : {}),
       locale: siteConfig.locale,
       url: path,
       siteName: siteConfig.fullName,

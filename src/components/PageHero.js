@@ -2,7 +2,7 @@ import Container from "./Container";
 import Eyebrow from "./Eyebrow";
 import SocialProofSection from "./SocialProofSection";
 
-export default function PageHero({ eyebrow, title, description }) {
+export default function PageHero({ eyebrow, title, description, showSocialProof = true }) {
   return (
     <>
       <section className="relative overflow-hidden bg-ink-950 py-20 text-white sm:py-24">
@@ -19,7 +19,7 @@ export default function PageHero({ eyebrow, title, description }) {
           ) : null}
         </Container>
       </section>
-      <SocialProofSection />
+      {showSocialProof ? <SocialProofSection /> : null}
     </>
   );
 }

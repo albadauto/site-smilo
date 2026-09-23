@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import PageHero from "@/components/PageHero";
 import Container from "@/components/Container";
@@ -22,6 +23,7 @@ export async function generateMetadata({ params }) {
     title: `${post.title} | Blog Smilo CRM`,
     description: post.description,
     path: `/blog/${post.slug}`,
+    article: post,
   });
 }
 
@@ -53,6 +55,7 @@ export default async function BlogPostPage({ params }) {
       "@type": "Organization",
       "@id": `${siteConfig.url}/#organization`,
       name: siteConfig.legalName,
+      url: `${siteConfig.url}/sobre`,
     },
     publisher: { "@id": `${siteConfig.url}/#organization` },
   };
@@ -61,6 +64,7 @@ export default async function BlogPostPage({ params }) {
     day: "2-digit",
     month: "long",
     year: "numeric",
+    timeZone: "UTC",
   });
 
   return (
@@ -68,12 +72,14 @@ export default async function BlogPostPage({ params }) {
       <JsonLd data={breadcrumbJsonLd} />
       <JsonLd data={articleJsonLd} />
 
-      <PageHero eyebrow={post.category} title={post.title} description={post.excerpt} />
+      <PageHero eyebrow={post.category} title={post.title} description={post.excerpt} showSocialProof={false} />
 
       <section className="py-16 sm:py-20">
         <Container className="max-w-3xl">
-          <div className="mb-10 flex items-center gap-3 text-sm text-ink-500">
-            <span>{formattedDate}</span>
+          <div className="mb-10 flex flex-wrap items-center gap-3 text-sm text-ink-500">
+            <time dateTime={post.date}>{formattedDate}</time>
+            <span aria-hidden="true">·</span>
+            <Link href="/sobre" className="underline underline-offset-4">Equipe {siteConfig.fullName}</Link>
             <span aria-hidden="true">·</span>
             <span>{post.readingTime}</span>
           </div>

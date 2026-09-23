@@ -45,13 +45,13 @@ O jeito mais simples é a [Vercel](https://vercel.com) (criadora do Next.js):
 4. Aponte o domínio `smilo.com.br` para o projeto na aba
    **Domains** da Vercel.
 
-O projeto também funciona em qualquer host que suporte Next.js (Node.js 18+): Railway, Render,
+O projeto também funciona em qualquer host que suporte Next.js (Node.js 20.9+): Railway, Render,
 servidor próprio com `next start`, etc.
 
 ## O que ajustar antes de publicar
 
 1. **Domínio real** — em `src/lib/site.js`, confira `url` e `domain`. Hoje está configurado como
-   `https://smilo.com.br`.
+   `https://www.smilo.com.br`.
 2. **WhatsApp / e-mail / telefone** — também em `src/lib/site.js` (`whatsappNumber`, `email`,
    `phone`, `supportHours`).
 3. **Preços** — em `src/lib/content.js`, no array `pricingPlans` (e `comparisonFeatures` para o
@@ -123,3 +123,28 @@ public/
 
 As capturas de tela usadas em `public/images/screens` foram extraídas diretamente do
 *Manual do Usuário — Smilo CRM v1.0* enviado para a criação deste site.
+
+
+## Domínio canônico e validação de SEO
+
+O endereço público principal é `https://www.smilo.com.br`, acompanhando o destino dos
+redirecionamentos permanentes configurados na Vercel. Mantenha o mesmo endereço em
+`src/lib/site.js`, canonicals, dados estruturados e sitemap. Os domínios anteriores e
+`smilo.com.br` devem preservar caminho e parâmetros ao redirecionar para ele.
+Não altere o endereço do aplicativo (`app.smilo.com.br`) ao ajustar o site institucional.
+
+O sitemap omite `lastmod` nas páginas sem data editorial registrada; uma publicação
+não deve fingir que todo o conteúdo foi atualizado. Artigos usam suas datas reais.
+
+Depois de gerar a versão de produção e iniciar o servidor:
+
+```bash
+npm run seo:check -- http://localhost:3000
+npm run seo:check -- https://www.smilo.com.br
+```
+
+O verificador percorre o sitemap, valida canonicals, indexabilidade, títulos e descrições
+únicos, H1, JSON-LD, links internos, imagens e resposta 404. Não mede posicionamento.
+No Search Console, envie `https://www.smilo.com.br/sitemap.xml` e inspecione a home
+e as páginas de produto. Verifique a canônica escolhida pelo Google, os motivos de
+exclusão, ações manuais e problemas de segurança. Solicitar indexação não garante inclusão.

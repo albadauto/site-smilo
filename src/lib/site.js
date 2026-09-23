@@ -9,7 +9,7 @@ export const siteConfig = {
   tagline: "O software de gestão odontológica que sua clínica merece",
   description:
     "Smilo é o software de gestão odontológica completo: agenda, prontuário eletrônico, pacientes, cobranças e financeiro em um só sistema. Teste grátis por 7 dias.",
-  url: "https://smilo.com.br",
+  url: "https://www.smilo.com.br",
   domain: "smilo.com.br",
   ogImage: "/images/brand/og-image.png",
   locale: "pt_BR",

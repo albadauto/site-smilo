@@ -2,6 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import Icon from "./Icon";
 
+const featurePages = {
+  agenda: "/agenda-odontologica",
+  prontuario: "/prontuario-eletronico-odontologico",
+  cobrancas: "/financeiro-clinica-odontologica",
+  "lembretes-whatsapp": "/lembrete-consulta-whatsapp",
+};
+
 function WhatsAppCardVisual({ image, imageAlt }) {
   return (
     <div className="relative h-full overflow-hidden bg-[#F7FBFF]">
@@ -44,7 +51,7 @@ export default function FeatureCard({
   visual,
   eyebrow = "Recurso do Smilo",
 }) {
-  const destination = href || (slug ? `/funcionalidades#${slug}` : null);
+  const destination = href || featurePages[slug] || (slug ? `/funcionalidades#${slug}` : null);
   const Wrapper = destination ? Link : "div";
   const wrapperProps = destination ? { href: destination } : {};
 

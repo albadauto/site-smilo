@@ -1,3 +1,24 @@
+import Link from "next/link";
+
+function ParagraphText({ block }) {
+  if (!block.links?.length) return block.text;
+  const parts = [];
+  let position = 0;
+  for (const link of block.links) {
+    const start = block.text.indexOf(link.text, position);
+    if (start < 0) continue;
+    parts.push(block.text.slice(position, start));
+    parts.push(
+      <Link key={`${start}-${link.href}`} href={link.href} className="font-medium text-ink-950 underline underline-offset-4">
+        {link.text}
+      </Link>
+    );
+    position = start + link.text.length;
+  }
+  parts.push(block.text.slice(position));
+  return parts;
+}
+
 export default function BlogPostContent({ blocks }) {
   return (
     <div className="flex flex-col gap-6">
@@ -47,7 +68,7 @@ export default function BlogPostContent({ blocks }) {
 
         return (
           <p key={index} className="text-base leading-relaxed text-ink-600 sm:text-lg">
-            {block.text}
+            <ParagraphText block={block} />
           </p>
         );
       })}

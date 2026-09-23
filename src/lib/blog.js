@@ -84,6 +84,7 @@ export const blogPosts = [
       {
         type: "p",
         text: "Os preços variam bastante conforme o número de dentistas, o volume de pacientes e os recursos incluídos — de planos simples por cerca de R$ 80 a R$ 100 mensais para um profissional autônomo, até pacotes mais robustos para clínicas com equipe, com valores que passam de R$ 200 por mês. Escrevemos um guia específico sobre o assunto, com os modelos de cobrança mais comuns e os custos escondidos a que prestar atenção: confira o artigo sobre quanto custa um software de gestão odontológica.",
+        links: [{"text": "quanto custa um software de gestão odontológica", "href": "/blog/quanto-custa-software-gestao-odontologica"}],
       },
       {
         type: "h2",
@@ -100,6 +101,7 @@ export const blogPosts = [
       {
         type: "p",
         text: "O Smilo foi desenvolvido justamente para cobrir esses pontos: agenda, prontuário clínico completo, cadastro de pacientes, cobranças automáticas e controle de acesso por perfil em um único sistema, sem limite de pacientes cadastrados e sem taxa de implantação escondida. Para clínicas com mais de um dentista, o plano Clínica/Pro ainda inclui lembretes automáticos de consulta por WhatsApp e relatórios financeiros por profissional. Você pode ver todos os módulos na página de funcionalidades ou comparar os planos Solo e Clínica/Pro na página de preços.",
+        links: [{"text": "página de funcionalidades", "href": "/funcionalidades"}, {"text": "página de preços", "href": "/precos"}],
       },
     ],
   },
@@ -169,6 +171,7 @@ export const blogPosts = [
       {
         type: "p",
         text: "No Smilo, o prontuário reúne consultas, exames, cirurgias, procedimentos, evolução clínica, prescrições, anexos e o histórico financeiro de cada paciente em uma única tela, com rastreabilidade completa do atendimento. O acesso é individual, por perfil de usuário, e as fichas de anamnese estão disponíveis tanto no plano Solo quanto no Clínica/Pro. Veja como o módulo de prontuário funciona na página de funcionalidades.",
+        links: [{"text": "página de funcionalidades", "href": "/funcionalidades"}],
       },
     ],
   },
@@ -236,6 +239,7 @@ export const blogPosts = [
       {
         type: "p",
         text: "No plano Clínica/Pro do Smilo, o lembrete de agenda via WhatsApp é automático: disparado um dia antes de cada consulta, sem exigir nenhuma ação manual da recepção. A funcionalidade fica integrada à agenda do sistema — assim que um atendimento é marcado, o lembrete já está programado. Veja mais detalhes na página de funcionalidades ou compare os planos na página de preços.",
+        links: [{"text": "página de funcionalidades", "href": "/funcionalidades"}, {"text": "página de preços", "href": "/precos"}],
       },
     ],
   },
@@ -291,6 +295,7 @@ export const blogPosts = [
       {
         type: "p",
         text: "O Smilo tem dois planos com preço fixo e transparente: o plano Solo, por R$ 89/mês, pensado para o dentista autônomo ou consultório individual, com agenda, prontuário clínico completo, fichas de anamnese e cobranças; e o plano Clínica/Pro, por R$ 199/mês, para clínicas com equipe e mais de um dentista, que inclui profissionais ilimitados, lembretes de agenda via WhatsApp, usuários e permissões por perfil e relatórios financeiros avançados. Nenhum dos dois planos tem limite de pacientes cadastrados nem taxa de implantação escondida, e é possível testar gratuitamente por 7 dias. Veja o comparativo completo na página de preços.",
+        links: [{"text": "página de preços", "href": "/precos"}],
       },
       {
         type: "h2",

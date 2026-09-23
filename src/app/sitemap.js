@@ -16,11 +16,9 @@ export default function sitemap() {
     { path: "/sobre", changeFrequency: "monthly", priority: 0.7 },
     { path: "/contato", changeFrequency: "monthly", priority: 0.7 },
   ];
-  const lastModified = new Date();
 
   const staticEntries = routes.map((route) => ({
     url: `${siteConfig.url}${route.path}`,
-    lastModified,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));

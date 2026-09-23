@@ -5,11 +5,12 @@ import Container from "./Container";
 import { navLinks, siteConfig } from "@/lib/site";
 
 const productLinks = [
-  { href: "/funcionalidades#dashboard", label: "Dashboard" },
-  { href: "/funcionalidades#pacientes", label: "Pacientes" },
-  { href: "/funcionalidades#prontuario", label: "Prontuário clínico" },
-  { href: "/funcionalidades#agenda", label: "Agenda" },
-  { href: "/funcionalidades#cobrancas", label: "Cobranças" },
+  { href: "/sistema-para-clinica-odontologica", label: "Sistema para clínica odontológica" },
+  { href: "/agenda-odontologica", label: "Agenda odontológica" },
+  { href: "/prontuario-eletronico-odontologico", label: "Prontuário eletrônico" },
+  { href: "/anamnese-odontologica", label: "Anamnese odontológica" },
+  { href: "/financeiro-clinica-odontologica", label: "Gestão financeira" },
+  { href: "/lembrete-consulta-whatsapp", label: "Lembretes pelo WhatsApp" },
 ];
 
 export default function Footer() {
@@ -87,7 +88,7 @@ export default function Footer() {
             © {new Date().getFullYear()} {siteConfig.name} · {siteConfig.legalName}. Todos os
             direitos reservados.
           </p>
-          <p>CNPJ da 68.991.365/0001-69 · Feito para clínicas odontológicas em todo o Brasil</p>
+          <p>CNPJ 68.991.365/0001-69 · Feito para clínicas odontológicas em todo o Brasil</p>
         </div>
       </Container>
     </footer>
