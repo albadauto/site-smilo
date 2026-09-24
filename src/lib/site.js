@@ -8,7 +8,7 @@ export const siteConfig = {
   legalName: "Mindit Soluções Digitais",
   tagline: "O software de gestão odontológica que sua clínica merece",
   description:
-    "Smilo é o software de gestão odontológica completo: agenda, prontuário eletrônico, pacientes, cobranças e financeiro em um só sistema. Teste grátis por 7 dias.",
+    "Sistema de gestão odontológica com agenda, prontuário eletrônico, pacientes, financeiro e cobranças. Teste 7 dias grátis.",
   url: "https://www.smilo.com.br",
   domain: "smilo.com.br",
   ogImage: "/images/brand/og-image.png",
