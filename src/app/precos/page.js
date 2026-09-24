@@ -12,7 +12,7 @@ import { createBreadcrumbJsonLd, createPageMetadata } from "@/lib/seo";
 
 const title = "Planos e Preços | Smilo CRM Odontológico";
 const description =
-  "Compare os planos Solo e Clínica/Pro do Smilo CRM. Gestão odontológica sem limite de pacientes e sem taxa de implantação escondida.";
+  "Compare os planos do Smilo CRM: Solo por R$ 119,90/mês e Clínica/Pro por R$ 219,90/mês, com recursos para toda a operação odontológica.";
 
 export const metadata = createPageMetadata({ title, description, path: "/precos" });
 
@@ -82,7 +82,7 @@ export default function PrecosPage() {
           <SectionHeading
             eyebrow="Comparativo"
             title="Compare os recursos de cada plano"
-            description="Todos os planos incluem prontuário clínico, fichas de anamnese e cobranças. No Clínica/Pro, você também conta com lembretes de agenda via WhatsApp e recursos de gestão de equipe."
+            description="Os dois planos incluem a operação clínica completa, com pacientes, agenda, prontuário, odontograma, orçamentos, retornos e financeiro. O Clínica/Pro acrescenta equipe ilimitada, NFS-e e prontuário inteligente com IA."
           />
           <div className="mt-12">
             <ComparisonTable />

@@ -10,7 +10,7 @@ branco**, moderno, alinhado à identidade da marca.
 | --- | --- |
 | `/` | Home — hero, funcionalidades, destaques, segurança, preços resumidos, FAQ |
 | `/funcionalidades` | Todos os 9 módulos do sistema, com telas reais do manual |
-| `/precos` | Planos Solo (R$89/mês) e Clínica/Pro (R$199/mês) + comparativo |
+| `/precos` | Planos Solo (R$119,90/mês) e Clínica/Pro (R$219,90/mês) + comparativo completo |
 | `/blog` | Artigos de SEO sobre gestão odontológica, prontuário eletrônico, lembretes via WhatsApp e preços de software odontológico |
 | `/sobre` | Missão, princípios e a empresa por trás do produto |
 | `/contato` | E-mail, WhatsApp, horário de atendimento e formulário de contato |
@@ -42,7 +42,7 @@ O jeito mais simples é a [Vercel](https://vercel.com) (criadora do Next.js):
 1. Suba este projeto para um repositório no GitHub/GitLab.
 2. Importe o repositório na Vercel.
 3. A Vercel detecta o Next.js automaticamente — não é preciso configurar nada.
-4. Aponte o domínio `smilo.com.br` para o projeto na aba
+4. Aponte o domínio `www.smilo.com.br` para o projeto na aba
    **Domains** da Vercel.
 
 O projeto também funciona em qualquer host que suporte Next.js (Node.js 20.9+): Railway, Render,
@@ -54,8 +54,8 @@ servidor próprio com `next start`, etc.
    `https://www.smilo.com.br`.
 2. **WhatsApp / e-mail / telefone** — também em `src/lib/site.js` (`whatsappNumber`, `email`,
    `phone`, `supportHours`).
-3. **Preços** — em `src/lib/content.js`, no array `pricingPlans` (e `comparisonFeatures` para o
-   comparativo de recursos). Os valores atuais são: Solo R$89/mês e Clínica/Pro R$199/mês.
+3. **Preços** — em `src/lib/content.js`, no array `pricingPlans` (e `comparisonSections` para o
+   comparativo de recursos). Os valores atuais são: Solo R$119,90/mês e Clínica/Pro R$219,90/mês.
 4. **Textos de funcionalidades** — também em `src/lib/content.js`, no array `modules`. Cada
    módulo tem `name`, `short` (usado nos cards), `description` e `bullets`.
 5. **Formulário de contato** (`src/components/ContactForm.js`) — hoje ele abre o app de e-mail do

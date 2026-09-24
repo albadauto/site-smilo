@@ -252,7 +252,7 @@ export const blogPosts = [
       "Quanto custa um software de gestão odontológica: modelos de cobrança comuns, custos escondidos a evitar e como calcular o retorno do investimento.",
     category: "Gestão odontológica",
     date: "2026-09-15",
-    updatedAt: "2026-09-15",
+    updatedAt: "2026-09-24",
     readingTime: "6 min de leitura",
     content: [
       {
@@ -294,7 +294,7 @@ export const blogPosts = [
       },
       {
         type: "p",
-        text: "O Smilo tem dois planos com preço fixo e transparente: o plano Solo, por R$ 89/mês, pensado para o dentista autônomo ou consultório individual, com agenda, prontuário clínico completo, fichas de anamnese e cobranças; e o plano Clínica/Pro, por R$ 199/mês, para clínicas com equipe e mais de um dentista, que inclui profissionais ilimitados, lembretes de agenda via WhatsApp, usuários e permissões por perfil e relatórios financeiros avançados. Nenhum dos dois planos tem limite de pacientes cadastrados nem taxa de implantação escondida, e é possível testar gratuitamente por 7 dias. Veja o comparativo completo na página de preços.",
+        text: "O Smilo tem dois planos com preço fixo e transparente: o plano Solo, por R$ 119,90/mês, pensado para o dentista autônomo ou consultório individual, com agenda, prontuário clínico completo, odontograma, orçamentos, retornos e financeiro; e o plano Clínica/Pro, por R$ 219,90/mês, para clínicas com equipe e mais de um dentista, que inclui profissionais ilimitados, financeiro por profissional, emissão de NFS-e, usuários e permissões por perfil e prontuário inteligente com IA. Nenhum dos dois planos tem limite de pacientes cadastrados nem taxa de implantação escondida, e é possível testar gratuitamente por 7 dias. Veja o comparativo completo na página de preços.",
         links: [{"text": "página de preços", "href": "/precos"}],
       },
       {

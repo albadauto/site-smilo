@@ -30,7 +30,9 @@ export default function PricingCard({ plan, headingLevel = 2, buttonLocation = "
 
       <div className="mt-6 flex items-end gap-1.5">
         <span className="text-sm font-medium translate-y-[-2px]">R$</span>
-        <span className="text-5xl font-semibold tracking-tight">{plan.price}</span>
+        <span className="text-5xl font-semibold tracking-tight">
+          {plan.price.replace(".", ",")}
+        </span>
         <span className={`pb-1 text-sm ${plan.highlighted ? "text-white/60" : "text-ink-500"}`}>
           {plan.priceSuffix}
         </span>
