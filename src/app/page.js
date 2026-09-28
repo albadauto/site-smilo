@@ -15,11 +15,12 @@ import Button from "@/components/Button";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { modules, generalFaq } from "@/lib/content";
 import JsonLd from "@/components/JsonLd";
+import AiAgentSection from "@/components/AiAgentSection";
 import { createPageMetadata } from "@/lib/seo";
 
-const title = "Sistema Odontológico para Clínicas | Smilo";
+const title = "Smilo | Sistema de Gestão Odontológica com Agente de IA";
 const description =
-  "Sistema de gestão odontológica com agenda, prontuário eletrônico, pacientes, financeiro e cobranças. Teste 7 dias grátis.";
+  "Smilo é o sistema de gestão odontológica completo com agente de IA: agenda, prontuário, pacientes, cobranças e financeiro conectados ao Smilo AI.";
 
 export const metadata = createPageMetadata({ title, description, path: "/" });
 
@@ -65,6 +66,7 @@ export default function HomePage() {
       <BenefitsMarquee />
       <StatsRow />
       <SocialProofSection />
+      <AiAgentSection />
 
       <section className="border-b border-ink-100 bg-ink-50/60 py-16 sm:py-20">
         <Container>

@@ -256,6 +256,8 @@ export const pricingPlans = [
     ctaLabel: "Grátis por 7 dias",
     ctaHref:"https://app.smilo.com.br/cadastro?plano=solo",
     features: [
+      "Smilo AI conectado aos dados da clínica",
+      "Consultas e ações por linguagem natural",
       "1 profissional",
       "Pacientes, anamnese e prontuário completo",
       "Odontograma por dente e face",
@@ -276,6 +278,8 @@ export const pricingPlans = [
     ctaLabel: "Começar com o Clínica/Pro",
     ctaHref:"https://app.smilo.com.br/cadastro?plano=pro",
     features: [
+      "Smilo AI para toda a equipe",
+      "IA com permissões separadas por perfil",
       "Tudo do plano Solo",
       "Profissionais ilimitados",
       "Financeiro por profissional e extrato mensal em PDF",
@@ -288,6 +292,14 @@ export const pricingPlans = [
 ];
 
 export const comparisonSections = [
+  {
+    area: "Smilo AI",
+    features: [
+      { label: "Agente de IA conectado aos dados do sistema", solo: true, clinica: true },
+      { label: "Consultas e ações por linguagem natural", solo: true, clinica: true },
+      { label: "IA com permissões por perfil de usuário", solo: false, clinica: true },
+    ],
+  },
   {
     area: "Geral",
     features: [
@@ -388,6 +400,16 @@ export const comparisonSections = [
 ];
 
 const newServicesFaq = [
+  {
+    question: "O Smilo é um sistema ou apenas uma ferramenta de IA?",
+    answer:
+      "O Smilo é um sistema completo de gestão odontológica, com agenda, pacientes, prontuário, cobranças e financeiro. O Smilo AI é o agente interno conectado a esses módulos: ele consulta os dados reais e prepara ações por conversa, sempre respeitando permissões e confirmações.",
+  },
+  {
+    question: "O que o Smilo AI consegue fazer?",
+    answer:
+      "O Smilo AI responde perguntas sobre a operação da clínica e ajuda a cadastrar pacientes, preparar agendamentos, retornos e registros de atendimento. Toda ação que altera dados precisa ser revisada e confirmada pela equipe.",
+  },
   {
     question: "Os lembretes de agenda via WhatsApp estão em qual plano?",
     answer:

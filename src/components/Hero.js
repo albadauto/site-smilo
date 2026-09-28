@@ -18,17 +18,16 @@ export default function Hero() {
         <div className="flex min-w-0 flex-col items-start gap-7 text-left">
         <Eyebrow tone="dark">
           <Icon name="Sparkles" className="h-3.5 w-3.5" />
-          Feito para clínicas odontológicas brasileiras
+          Sistema odontológico completo com agente de IA
         </Eyebrow>
 
         <h1 className="max-w-4xl text-balance text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl xl:text-6xl">
-          O software de gestão odontológica que sua clínica merece
+          O sistema de gestão odontológica com um agente de IA dentro
         </h1>
 
         <p className="max-w-2xl text-balance text-base leading-relaxed text-white/65 sm:text-lg">
-          Agenda, prontuário clínico, pacientes, cobranças e financeiro em um único CRM.
-          O Smilo organiza a rotina da sua clínica do agendamento até o recebimento —
-          tudo pelo navegador, sem planilhas soltas.
+          O Smilo reúne agenda, prontuário clínico, pacientes, cobranças e financeiro em um único sistema.
+          E o Smilo AI trabalha sobre esses dados para responder perguntas e executar tarefas com a confirmação da sua equipe.
         </p>
 
         <div className="flex w-full flex-col items-stretch gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center">

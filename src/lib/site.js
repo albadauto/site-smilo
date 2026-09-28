@@ -6,9 +6,9 @@ export const siteConfig = {
   name: "Smilo",
   fullName: "Smilo CRM",
   legalName: "Mindit Soluções Digitais",
-  tagline: "O software de gestão odontológica que sua clínica merece",
+  tagline: "O sistema de gestão odontológica com um agente de IA dentro",
   description:
-    "Sistema de gestão odontológica com agenda, prontuário eletrônico, pacientes, financeiro e cobranças. Teste 7 dias grátis.",
+    "Smilo é o sistema de gestão odontológica completo com Smilo AI: agenda, prontuário eletrônico, pacientes, cobranças e financeiro conectados a um agente de IA.",
   url: "https://www.smilo.com.br",
   domain: "smilo.com.br",
   ogImage: "/images/brand/og-image.png",
@@ -30,6 +30,8 @@ export const siteConfig = {
     "sistema para dentista",
     "software odontológico",
     "Smilo CRM",
+    "IA para clínica odontológica",
+    "agente de IA odontológico",
   ],
 };
 
@@ -40,6 +42,7 @@ export function whatsappLink(message) {
 }
 
 export const navLinks = [
+  { href: "/#smilo-ai", label: "Smilo AI" },
   { href: "/funcionalidades", label: "Funcionalidades" },
   { href: "/precos", label: "Preços" },
   { href: "/blog", label: "Blog" },

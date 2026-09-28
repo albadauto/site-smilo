@@ -5,10 +5,11 @@ import CtaSection from "@/components/CtaSection";
 import JsonLd from "@/components/JsonLd";
 import { modules } from "@/lib/content";
 import { createBreadcrumbJsonLd, createPageMetadata } from "@/lib/seo";
+import AiAgentSection from "@/components/AiAgentSection";
 
 const title = "Funcionalidades | Smilo CRM Odontológico";
 const description =
-  "Conheça os recursos do Smilo CRM: agenda, pacientes, odontograma, prontuário, orçamentos, retornos, documentos, financeiro, NFS-e e IA.";
+  "Conheça o sistema Smilo com Smilo AI, agenda, pacientes, odontograma, prontuário, orçamentos, retornos, financeiro e NFS-e.";
 
 export const metadata = createPageMetadata({ title, description, path: "/funcionalidades" });
 
@@ -23,9 +24,11 @@ export default function FuncionalidadesPage() {
       <JsonLd data={breadcrumbJsonLd} />
       <PageHero
         eyebrow="Funcionalidades"
-        title="Um módulo para cada etapa do atendimento"
-        description="Da chegada do paciente ao recebimento do pagamento, o Smilo acompanha o fluxo completo da sua clínica odontológica — com telas simples e pensadas para o dia a dia da recepção e do consultório."
+        title="Um sistema completo, com IA conectada a cada etapa"
+        description="Da chegada do paciente ao recebimento, o Smilo centraliza a operação da clínica. O Smilo AI transforma os dados desses módulos em respostas e ações, sem substituir a segurança e o controle do sistema."
       />
+
+      <AiAgentSection compact />
 
       <section className="py-4">
         <Container>

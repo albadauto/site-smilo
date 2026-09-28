@@ -10,8 +10,8 @@ export default function PricingPreview() {
       <Container>
         <SectionHeading
           eyebrow="Preços"
-          title="Um plano para cada tamanho de clínica"
-          description="Sem taxa de implantação escondida e sem limite de pacientes cadastrados. Escolha o plano pelo tamanho da sua equipe e evolua quando precisar."
+          title="Sistema completo e Smilo AI em todos os planos"
+          description="Escolha o plano pelo tamanho da sua equipe. Em ambos, você recebe os módulos de gestão e o agente de IA conectado aos dados da clínica."
         />
 
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 max-w-3xl mx-auto">
