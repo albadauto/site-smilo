@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Sistema Odontológico para Clínicas | Smilo",
+    default: "Sistema Odontológico com IA para Clínicas | Smilo",
     template: "%s | Smilo CRM",
   },
   description: siteConfig.description,
@@ -32,7 +32,7 @@ export const metadata = {
     locale: siteConfig.locale,
     url: siteConfig.url,
     siteName: siteConfig.fullName,
-    title: "Sistema Odontológico para Clínicas | Smilo",
+    title: "Sistema Odontológico com IA para Clínicas | Smilo",
     description: siteConfig.description,
     images: [
       {
@@ -45,7 +45,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sistema Odontológico para Clínicas | Smilo",
+    title: "Sistema Odontológico com IA para Clínicas | Smilo",
     description: siteConfig.description,
     images: [siteConfig.ogImage],
   },

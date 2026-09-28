@@ -4,6 +4,7 @@ import { blogPosts } from "@/lib/blog";
 export default function sitemap() {
   const routes = [
     { path: "", changeFrequency: "weekly", priority: 1 },
+    { path: "/sistema-odontologico-com-ia", changeFrequency: "monthly", priority: 0.95 },
     { path: "/sistema-para-clinica-odontologica", changeFrequency: "monthly", priority: 0.9 },
     { path: "/funcionalidades", changeFrequency: "monthly", priority: 0.9 },
     { path: "/agenda-odontologica", changeFrequency: "monthly", priority: 0.9 },

@@ -42,7 +42,7 @@ export function whatsappLink(message) {
 }
 
 export const navLinks = [
-  { href: "/#smilo-ai", label: "Smilo AI" },
+  { href: "/sistema-odontologico-com-ia", label: "Smilo AI" },
   { href: "/funcionalidades", label: "Funcionalidades" },
   { href: "/precos", label: "Preços" },
   { href: "/blog", label: "Blog" },

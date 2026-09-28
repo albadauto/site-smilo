@@ -125,6 +125,12 @@ export const agendaOdontologicaPage = {
   ],
   relatedLinks: [
     {
+      icon: "Sparkles",
+      name: "Sistema odontológico com IA",
+      short: "Conheça o Smilo AI, agente conectado à agenda, pacientes, prontuário e gestão da clínica.",
+      href: "/sistema-odontologico-com-ia",
+    },
+    {
       icon: "Layers",
       name: "Todas as funcionalidades",
       short: "Conheça os módulos de pacientes, prontuário, cobranças e gestão da clínica.",

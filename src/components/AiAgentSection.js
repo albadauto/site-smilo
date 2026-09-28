@@ -27,7 +27,7 @@ export default function AiAgentSection({ compact = false }) {
           </p>
           {!compact ? (
             <div className="mt-8">
-              <Button href="/funcionalidades#smilo-ai" variant="outline" icon="ArrowRight">
+              <Button href="/sistema-odontologico-com-ia" variant="outline" icon="ArrowRight">
                 Conhecer o Smilo AI
               </Button>
             </div>
