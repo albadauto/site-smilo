@@ -1,11 +1,24 @@
 export const GA4_ID = "G-384RCVBJBY";
-export const GOOGLE_ADS_CONVERSION_ID = "AW-18437044843/Jy_bCPK9xvEcEOv0u9dE";
+
+const localMap = {
+  header: "cabecalho",
+  header_mobile: "cabecalho_mobile",
+  hero: "destaque_principal",
+  hero_whatsapp: "destaque_principal",
+  floating_whatsapp: "botao_flutuante",
+  home_pricing: "planos_pagina_inicial",
+  pricing_page: "pagina_precos",
+  pricing_preview: "resumo_planos",
+  whatsapp_showcase: "secao_whatsapp",
+  cta_section: "secao_chamada",
+  landing_intro: "introducao_landing",
+};
 
 function eventContext(link, browser) {
   return {
-    button_name: link.dataset.buttonName || link.textContent?.trim() || "",
-    page_path: browser.location.pathname,
-    button_location: link.dataset.buttonLocation || "content",
+    nome_botao: link.dataset.buttonName || link.textContent?.trim() || "",
+    pagina: browser.location.pathname,
+    local_botao: localMap[link.dataset.buttonLocation] || link.dataset.buttonLocation || "conteudo",
   };
 }
 
@@ -14,6 +27,22 @@ function sendGa4Event(browser, eventName, params) {
     send_to: GA4_ID,
     ...params,
   });
+}
+
+function destinationLabel(destination, browser) {
+  if (destination.hostname === "app.smilo.com.br" && destination.pathname.startsWith("/cadastro")) {
+    return "pagina_cadastro";
+  }
+
+  if (
+    destination.origin === browser.location.origin &&
+    destination.pathname === "/" &&
+    destination.hash === "#planos"
+  ) {
+    return "secao_planos";
+  }
+
+  return destination.pathname || destination.hostname;
 }
 
 export function trackClick(link, browser = globalThis.window) {
@@ -25,45 +54,33 @@ export function trackClick(link, browser = globalThis.window) {
 
     const isWhatsApp = ["wa.me", "api.whatsapp.com", "web.whatsapp.com"].includes(destination.hostname);
     if (isWhatsApp) {
-      sendGa4Event(browser, "whatsapp_click", context);
+      sendGa4Event(browser, "clique_whatsapp", {
+        ...context,
+        destino: "whatsapp",
+      });
       return;
     }
 
-    const isPlansLink = destination.origin === browser.location.origin && (
-      destination.pathname.replace(/\/$/, "") === "/precos" ||
-      (destination.pathname === "/" && destination.hash === "#planos")
-    );
     const isPlanSelection = link.dataset.trackPlanClick === "true";
     const isFreeTrial = link.dataset.trackFreeTrialClick === "true";
-    const isProPlan = link.dataset.trackProPlanClick === "true" ||
-      destination.searchParams.get("plano") === "pro";
 
-    if (isFreeTrial) {
-      sendGa4Event(browser, "free_trial_click", context);
-    }
+    if (!isPlanSelection && !isFreeTrial) return;
 
-    if (isPlansLink || isPlanSelection) {
-      sendGa4Event(browser, "plan_btn_click", context);
-    }
+    const plano =
+      link.dataset.planName ||
+      destination.searchParams.get("plano") ||
+      (isFreeTrial && destination.hostname === "app.smilo.com.br" ? "solo" : "nao_selecionado");
 
-    if (isPlanSelection && isProPlan) {
-      sendGa4Event(browser, "pro_plan_click", {
-        ...context,
-        plan_name: link.dataset.planName || "clinica_pro",
-      });
-    }
-
-    if (isPlanSelection) {
-      browser.gtag("event", "conversion", {
-        send_to: GOOGLE_ADS_CONVERSION_ID,
-        value: 1.0,
-        currency: "BRL",
-      });
-    }
+    sendGa4Event(browser, "inicio_cadastro", {
+      ...context,
+      origem: isPlanSelection ? "planos" : "teste_gratis_site",
+      plano,
+      destino: destinationLabel(destination, browser),
+    });
   } catch {
     // Analytics must never interrupt the link's normal navigation.
   }
 }
 
-// Backward-compatible export used by existing code/tests.
+// Mantém compatibilidade com o componente atual de rastreamento.
 export const trackPlanClick = trackClick;
