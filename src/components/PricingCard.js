@@ -27,6 +27,14 @@ export default function PricingCard({ plan, headingLevel = 2, buttonLocation = "
       <p className={`mt-1.5 text-sm leading-relaxed ${plan.highlighted ? "text-white/60" : "text-ink-600"}`}>
         {plan.description}
       </p>
+      {plan.aiIncluded ? (
+        <div className="mt-4">
+          <p className="text-sm font-semibold">{plan.aiIncluded}</p>
+          <p className={`mt-1 text-xs leading-relaxed ${plan.highlighted ? "text-white/60" : "text-ink-500"}`}>
+            {plan.aiDescription}
+          </p>
+        </div>
+      ) : null}
 
       <div className="mt-6 flex items-end gap-1.5">
         <span className="text-sm font-medium translate-y-[-2px]">R$</span>
